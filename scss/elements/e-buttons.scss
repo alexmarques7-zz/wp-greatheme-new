@@ -1,0 +1,25 @@
+// Buttons
+
+.e-btn {
+    border: 0;
+    box-shadow: $t-shadow-bt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 0 20px;
+    height: 59px;
+    background-color: $t-brand-color;
+    color: $t-white;
+    line-height: 22px;
+    font-size: $t-text-xl;
+    font-family: 'font-bold';
+    transition: background-color 1s ease-out;
+
+    &:hover {
+        background-color: $t-brand-color-dark;
+        color: $t-white;
+        cursor: pointer;
+    }
+}
