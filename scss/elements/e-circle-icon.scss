@@ -6,9 +6,6 @@
     justify-content: center;
     background-color: $t-white;
     border-radius: 50%;
-    
-    &__icon {
-        color: $t-brand-color;
-        font-size: $t-text-xxxl;
-    }
+    color: $t-brand-color;
+    font-size: $t-text-xxxl;
 }

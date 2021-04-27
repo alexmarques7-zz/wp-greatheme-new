@@ -1,10 +1,18 @@
 // Text sizes
+.d-text-md {
+    font-size: $t-text-md;
+}
+
 .d-text-lg {
     font-size: $t-text-lg;
 }
 
 .d-text-xl {
     font-size: $t-text-xl;
+}
+
+.d-text-xxl {
+    font-size: $t-text-xxl;
 }
 
 .d-text-xxxl {

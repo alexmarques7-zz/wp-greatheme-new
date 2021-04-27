@@ -4,26 +4,34 @@ $path: '/aulapp/wp-content/themes/wp-greatheme-new/';
 // Commom colors
 $t-white: #fff;
 $t-black: #000;
+$t-aulapp-rose: #DF4478;
+$t-aulapp-green: #294951;
 
 // Brand colors
-$t-brand-color: #DF4478;
+$t-brand-color: $t-aulapp-rose;
 $t-brand-color-light: lighten($t-brand-color, 20%);
 $t-brand-color-medium: darken($t-brand-color, 15%);
 $t-brand-color-dark: darken($t-brand-color, 22%);
+
+$t-brand-color-two: $t-aulapp-green;
+$t-brand-color-two-light: lighten($t-brand-color-two, 3%);
+$t-brand-color-two-medium: darken($t-brand-color-two, 15%);
+$t-brand-color-two-dark: darken($t-brand-color-two, 22%);
 
 // Grays
 $t-gray-light: #F2F2F2;
 $t-gray-medium: #E1E1E1;
 
 // Text colors
-$t-text-color-dark: #294951;
+$t-text-color-dark: $t-aulapp-green;
 $t-text-color-light: $t-white;
 
 // Text sizes
-$t-text-lg:     1rem;       //16px
-$t-text-xl:     1.125rem;   //18px
-$t-text-xxl:    1rem;
-$t-text-xxxl:   2.5rem;     //40px
+$t-text-md:     1rem;       //16px
+$t-text-lg:     1.125rem;   //18px
+$t-text-xl:     2rem;       //32px
+$t-text-xxl:    2.5rem;     //40px
+$t-text-xxxl:   3rem;       //48px
 
 // Shadows
 $t-shadow-bt: 3px 3px 2px #00000029;

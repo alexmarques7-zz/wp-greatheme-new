@@ -5528,7 +5528,7 @@ textarea.form-control-lg {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
-.py-5 {
+.py-5, .c-plans-box {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important; }
 
@@ -7619,14 +7619,20 @@ textarea.form-control-lg {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.d-text-lg {
+.d-text-md {
   font-size: 1rem; }
 
-.d-text-xl {
+.d-text-lg {
   font-size: 1.125rem; }
 
-.d-text-xxxl {
+.d-text-xl {
+  font-size: 2rem; }
+
+.d-text-xxl {
   font-size: 2.5rem; }
+
+.d-text-xxxl {
+  font-size: 3rem; }
 
 .d-select-none {
   -webkit-user-select: none;
@@ -7640,6 +7646,15 @@ textarea.form-control-lg {
 .d-text-color-dark {
   color: #294951; }
 
+.d-text-color-light {
+  color: #fff; }
+
+.d-bg-brand-color {
+  background-color: #DF4478; }
+
+.d-bg-brand-color-two {
+  background-color: #294951; }
+
 .d-bg-gray-light {
   background-color: #F2F2F2; }
 
@@ -7649,7 +7664,7 @@ textarea.form-control-lg {
 .d-shadow-md {
   box-shadow: 3px 3px 2px #00000029; }
 
-.e-btn {
+.e-btn, .c-plans-box__button {
   border: 0;
   box-shadow: 3px 3px 2px #00000029;
   display: inline-flex;
@@ -7665,19 +7680,31 @@ textarea.form-control-lg {
   font-size: 1.125rem;
   font-family: 'font-bold';
   transition: background-color 1s ease-out; }
-  .e-btn:hover {
+  .e-btn:hover, .c-plans-box__button:hover {
     background-color: #991a45;
     color: #fff;
     cursor: pointer; }
 
-.e-circle-icon {
+.e-circle-icon, .c-plans-box.--highlighted__icon {
   width: 83px;
   height: 83px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  border-radius: 50%; }
-  .e-circle-icon__icon {
-    color: #DF4478;
-    font-size: 2.5rem; }
+  border-radius: 50%;
+  color: #DF4478;
+  font-size: 3rem; }
+
+.c-plans-box {
+  background-color: #F2F2F2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .c-plans-box__title {
+    font-family: 'font-bold';
+    font-size: 2rem; }
+  .c-plans-box.--highlighted {
+    background-color: #2e525b;
+    color: #fff; }

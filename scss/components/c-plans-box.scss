@@ -1,0 +1,27 @@
+// Plans box
+.c-plans-box {
+    @extend .py-5;
+    background-color: $t-gray-light;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-family: 'font-bold';
+        font-size: $t-text-xl;
+    }
+
+    &__button {
+        @extend .e-btn;
+    }
+
+    &.--highlighted {
+        background-color: $t-brand-color-two-light;
+        color: $t-text-color-light;
+
+        &__icon {
+            @extend .e-circle-icon;
+        }
+    }
+}
