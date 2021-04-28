@@ -8,18 +8,32 @@
     justify-content: space-between;
     text-decoration: none;
     border-radius: 2px;
-    padding: 0 20px;
+    padding: 0 30px;
     height: 59px;
     background-color: $t-brand-color;
     color: $t-white;
     line-height: 22px;
     font-size: $t-text-lg;
     font-family: 'font-bold';
-    transition: background-color 1s ease-out;
+    transition: background-color .2s ease-out;
 
     &:hover {
         background-color: $t-brand-color-dark;
         color: $t-white;
         cursor: pointer;
+    }
+
+    &.--glass {
+        background-color: none;
+        border: solid 3px $t-brand-color-light;
+        color: $t-brand-color-light;
+    }
+
+    &.--brand-color-two {
+        background-color: $t-brand-color-two;
+
+        &:hover {
+            background-color: $t-brand-color-two-medium;
+        }
     }
 }

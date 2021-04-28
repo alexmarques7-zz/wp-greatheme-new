@@ -80,12 +80,17 @@
     unset( $sizes['large']);
     return $sizes;
 	}
-		
-	// Register Navigation Menu
-	register_nav_menus(array('primary' => 'Primary Navigation'));
 
-	add_action( 'init', 'register_my_menu' );
-	function register_my_menu() { register_nav_menu('header-menu',__( 'Header Menu' )); }
+	if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
+		function mytheme_register_nav_menu(){
+			register_nav_menus( array(
+				'primary_menu' => __( 'Menu primário', 'Menu de áreas localizado no topo do site, Ex. Educacional, Corporativo, etc.' ),
+				'secundary_menu' => __( 'Menu Secundário', 'Menu localizado nas área interna. Ex. Sobre, serviços, etc.' ),
+				'footer_menu'  => __( 'Menu rodapé', 'Menu localizado no rodapé.' )
+			) );
+		}
+		add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
+	}
 
 	// Excerpt Class
 	add_filter( "the_excerpt", "add_class_to_excerpt" );

@@ -15,12 +15,6 @@
         <h3 class="d-text-color-dark d-font-bold d-text-xl mb-3">Sala Virtual</h3>
         <p class="d-text-color-dark d-font-regular d-text-md text-center">Ambiente web e mobile para professores e alunos</p>
       </div>
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-5 d-flex flex-column align-items-center">
-        <i class="e-circle-icon material-icons mb-4">warning</i>
-        <h3 class="d-text-color-dark d-font-bold d-text-xl mb-3">Sala Virtual</h3>
-        <p class="d-text-color-dark d-font-regular d-text-md text-center">Ambiente web e mobile para professores e alunos</p>
-      </div>
       
     </div>
   </div>

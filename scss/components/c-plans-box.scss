@@ -1,11 +1,11 @@
 // Plans box
 .c-plans-box {
     @extend .py-5;
-    background-color: $t-gray-light;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $t-gray-light;
 
     &__title {
         font-family: 'font-bold';
@@ -16,12 +16,10 @@
         @extend .e-btn;
     }
 
+    // Highlighted plans
+
     &.--highlighted {
         background-color: $t-brand-color-two-light;
         color: $t-text-color-light;
-
-        &__icon {
-            @extend .e-circle-icon;
-        }
     }
 }

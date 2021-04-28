@@ -15,11 +15,12 @@ $t-brand-color-dark: darken($t-brand-color, 22%);
 
 $t-brand-color-two: $t-aulapp-green;
 $t-brand-color-two-light: lighten($t-brand-color-two, 3%);
-$t-brand-color-two-medium: darken($t-brand-color-two, 15%);
+$t-brand-color-two-medium: darken($t-brand-color-two, 5%);
 $t-brand-color-two-dark: darken($t-brand-color-two, 22%);
 
 // Grays
-$t-gray-light: #F2F2F2;
+$t-gray-super-light: #F2F2F2;
+$t-gray-light: #EAEAEA;
 $t-gray-medium: #E1E1E1;
 
 // Text colors
@@ -35,4 +36,5 @@ $t-text-xxxl:   3rem;       //48px
 
 // Shadows
 $t-shadow-bt: 3px 3px 2px #00000029;
+$t-shadow-bt-hover: 3px 3px 2px #00000029;
 

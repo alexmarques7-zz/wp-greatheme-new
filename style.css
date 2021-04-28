@@ -7655,8 +7655,11 @@ textarea.form-control-lg {
 .d-bg-brand-color-two {
   background-color: #294951; }
 
-.d-bg-gray-light {
+.d-bg-gray-super-light {
   background-color: #F2F2F2; }
+
+.d-bg-gray-light {
+  background-color: #EAEAEA; }
 
 .d-bg-gray-medium {
   background-color: #E1E1E1; }
@@ -7672,20 +7675,28 @@ textarea.form-control-lg {
   justify-content: space-between;
   text-decoration: none;
   border-radius: 2px;
-  padding: 0 20px;
+  padding: 0 30px;
   height: 59px;
   background-color: #DF4478;
   color: #fff;
   line-height: 22px;
   font-size: 1.125rem;
   font-family: 'font-bold';
-  transition: background-color 1s ease-out; }
+  transition: background-color .2s ease-out; }
   .e-btn:hover, .c-plans-box__button:hover {
     background-color: #991a45;
     color: #fff;
     cursor: pointer; }
+  .e-btn.--glass, .--glass.c-plans-box__button {
+    background-color: none;
+    border: solid 3px #ee9bb7;
+    color: #ee9bb7; }
+  .e-btn.--brand-color-two, .--brand-color-two.c-plans-box__button {
+    background-color: #294951; }
+    .e-btn.--brand-color-two:hover, .--brand-color-two.c-plans-box__button:hover {
+      background-color: #203a40; }
 
-.e-circle-icon, .c-plans-box.--highlighted__icon {
+.e-circle-icon {
   width: 83px;
   height: 83px;
   display: flex;
@@ -7697,11 +7708,11 @@ textarea.form-control-lg {
   font-size: 3rem; }
 
 .c-plans-box {
-  background-color: #F2F2F2;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-color: #EAEAEA; }
   .c-plans-box__title {
     font-family: 'font-bold';
     font-size: 2rem; }
