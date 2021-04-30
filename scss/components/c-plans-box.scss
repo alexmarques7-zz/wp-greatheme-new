@@ -12,10 +12,6 @@
         font-size: $t-text-xl;
     }
 
-    &__button {
-        @extend .e-btn;
-    }
-
     // Highlighted plans
 
     &.--highlighted {

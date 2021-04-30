@@ -5504,7 +5504,7 @@ textarea.form-control-lg {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
-.px-5 {
+.px-5, .c-navbar-horizontal > div {
   padding-right: 3rem !important;
   padding-left: 3rem !important; }
 
@@ -7667,7 +7667,7 @@ textarea.form-control-lg {
 .d-shadow-md {
   box-shadow: 3px 3px 2px #00000029; }
 
-.e-btn, .c-plans-box__button {
+.e-btn {
   border: 0;
   box-shadow: 3px 3px 2px #00000029;
   display: inline-flex;
@@ -7683,17 +7683,22 @@ textarea.form-control-lg {
   font-size: 1.125rem;
   font-family: 'font-bold';
   transition: background-color .2s ease-out; }
-  .e-btn:hover, .c-plans-box__button:hover {
+  .e-btn:hover {
     background-color: #991a45;
     color: #fff;
     cursor: pointer; }
-  .e-btn.--glass, .--glass.c-plans-box__button {
-    background-color: none;
+  .e-btn.--glass {
+    background-color: transparent;
     border: solid 3px #ee9bb7;
-    color: #ee9bb7; }
-  .e-btn.--brand-color-two, .--brand-color-two.c-plans-box__button {
+    color: #ee9bb7;
+    box-shadow: none;
+    transition: all .2s ease-out; }
+    .e-btn.--glass:hover {
+      border-color: #b71f52;
+      color: #b71f52; }
+  .e-btn.--brand-color-two {
     background-color: #294951; }
-    .e-btn.--brand-color-two:hover, .--brand-color-two.c-plans-box__button:hover {
+    .e-btn.--brand-color-two:hover {
       background-color: #203a40; }
 
 .e-circle-icon {
@@ -7719,3 +7724,15 @@ textarea.form-control-lg {
   .c-plans-box.--highlighted {
     background-color: #2e525b;
     color: #fff; }
+
+.c-navbar-horizontal > div {
+  display: flex;
+  align-items: center; }
+
+.c-navbar-horizontal .menu {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding-left: 0; }

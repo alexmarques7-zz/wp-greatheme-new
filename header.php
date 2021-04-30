@@ -20,10 +20,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <?php wp_nav_menu( array( 
-                        'theme_location' => 'primary_menu', 
-                        ) ); 
-                    ?>
+                    <div class="c-navbar-horizontal">
+                        <?php wp_nav_menu( array( 
+                            'theme_location' => 'primary_menu', 
+                            ) ); 
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,8 +34,14 @@
     <div class="c-container-fluid d-bg-gray-light">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
+                
+                <!-- Logo primary and secundary -->
+                <?php if (is_page_template( 'page-educacional.php' ) && (function_exists( 'the_custom_logo'))): ?>
+                <?php the_custom_logo(); ?>
+                <?php else: ?>
+                <?php the_custom_logo(); ?>
+                <?php endif ?>
 
-                <?php if (function_exists('the_custom_logo')) {the_custom_logo();} ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>

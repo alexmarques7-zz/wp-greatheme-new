@@ -1,0 +1,25 @@
+//Navbar Horizontal - Wordpress 5
+.c-navbar-horizontal {
+
+    // Wordpress menu container styles
+    > div {
+        @extend .px-5;
+        display: flex;
+        align-items: center;
+    }
+
+    // Wordpress menu styles
+    .menu {
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    // Wordpress menu item styles
+    .menu-item {
+        
+    }
+}

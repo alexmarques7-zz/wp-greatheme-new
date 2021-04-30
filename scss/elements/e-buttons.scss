@@ -24,9 +24,17 @@
     }
 
     &.--glass {
-        background-color: none;
+        background-color: transparent;
         border: solid 3px $t-brand-color-light;
         color: $t-brand-color-light;
+        box-shadow: none;
+        transition: all .2s ease-out;
+
+        &:hover {
+            border-color: $t-brand-color-medium;
+            color: $t-brand-color-medium;
+        }
+        
     }
 
     &.--brand-color-two {

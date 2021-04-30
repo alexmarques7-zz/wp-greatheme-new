@@ -1,23 +1,28 @@
 <?php
-	/**
-	 * @package 	WordPress
-	 * @autor 		Alex Marques
-	 */
+/**
+ * @package 	WordPress
+ * @autor 		Alex Marques
+ */
 	
+	// Remove JQUERY
+	function my_init() {
+		if (!is_admin()) {
+			wp_deregister_script('jquery');
+			wp_register_script('jquery', false);
+		}
+	}
+	add_action('init', 'my_init');
 
 
-	/* ========================================================================================================================
-	Required external files
-	======================================================================================================================== */
-	
-	// Scripts and Styles
-	add_action( 'wp_enqueue_scripts', 'my_assets' );
-
+	// External files
 	function my_assets() {
         wp_enqueue_script( 'bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js', array('jquery'), NULL, true );
 		wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/icon?family=Material+Icons');
 		wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css');
 	}
+	add_action( 'wp_enqueue_scripts', 'my_assets' );
+
+
 
 	// Bootstrap 4 Menu
 	// require_once( 'libs/bs4navwalker.php' );
@@ -27,10 +32,8 @@
 	// $detect = new Mobile_Detect;
 
 
-	/* ========================================================================================================================
-	Add html 5 support to wordpress elements
-	======================================================================================================================== */
-	
+
+	// Add html 5 support to wordpress elements	
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
@@ -38,38 +41,35 @@
 		'caption'
 	) );
 
+
+	
+	//Custom logo
 	add_theme_support('custom-logo', array(
 		'header-text' => array('site-title','site-description'),
 	));
 
 
 
-	/* ========================================================================================================================
-	Filter Search by Post
-	======================================================================================================================== */
-	
-	add_filter('pre_get_posts','SearchFilter');
-	function SearchFilter($query) {
-		if ($query->is_search) {
-			$query->set('post_type', 'post');
-		}
-		return $query;
-	}
+	// Filter Search by Post
+	// function SearchFilter($query) {
+	// 	if ($query->is_search) {
+	// 		$query->set('post_type', 'post');
+	// 	}
+	// 	return $query;
+	// }
+	// add_filter('pre_get_posts','SearchFilter');
 
 
-
-	/* ========================================================================================================================
-	Theme specific settings
-	======================================================================================================================== */
-
+	// Post thumbnails			
 	add_theme_support('post-thumbnails');
 
-	// Custom Thumbs
 
+	// Custom Thumbs
 	add_image_size( 'thumb', 240, 135, false );
 	add_image_size( 'med', 800, 450, false );
 	add_image_size( 'big', 1280, 720, false );
 	add_image_size( 'static-banner', 1920, 300, false );
+
 
 	// Disable Native Thumbs
 	add_filter('intermediate_image_sizes_advanced', 'add_image_insert_override' );
@@ -81,43 +81,29 @@
     return $sizes;
 	}
 
+	// Register navbars
 	if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 		function mytheme_register_nav_menu(){
 			register_nav_menus( array(
-				'primary_menu' => __( 'Menu primário', 'Menu de áreas localizado no topo do site, Ex. Educacional, Corporativo, etc.' ),
-				'secundary_menu' => __( 'Menu Secundário', 'Menu localizado nas área interna. Ex. Sobre, serviços, etc.' ),
-				'footer_menu'  => __( 'Menu rodapé', 'Menu localizado no rodapé.' )
+				'primary_menu' => __( 'Primário', 'Menu de áreas localizado no topo do site, Ex. Educacional, Corporativo, etc.' ),
+				'secundary_menu' => __( 'Secundário', 'Menu localizado nas área interna. Ex. Sobre, serviços, etc.' ),
+				'footer_menu'  => __( 'Rodapé', 'Menu localizado no rodapé.' )
 			) );
 		}
 		add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
 	}
 
 	// Excerpt Class
-	add_filter( "the_excerpt", "add_class_to_excerpt" );
-
 	function add_class_to_excerpt( $excerpt ) {
-	    return str_replace('<p', '<p class="c-excerpt"', $excerpt);
+	    return str_replace('<p', '<p class="e-excerpt"', $excerpt);
 	}
-
-
-
-
-	/* ========================================================================================================================
-	Actions and Filters
-	======================================================================================================================== */
-
-
-
-
-	/* ========================================================================================================================
-	Custom Post Types 
-	======================================================================================================================== */
+	add_filter( "the_excerpt", "add_class_to_excerpt" );
 	
-	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
+	// Custom Excerpt Length
 	function custom_excerpt_length( $length ) {
 	    return 20;
 	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 	
 
@@ -126,28 +112,26 @@
 	======================================================================================================================== */
 	
 	//remove wp version
-	add_filter('the_generator', 'theme_remove_version');
 	function theme_remove_version() {
 		return '';
 	}
+	add_filter('the_generator', 'theme_remove_version');
 	
 	//remove default footer text
-	add_filter('admin_footer_text', 'remove_footer_admin');
 	function remove_footer_admin () {
 		echo "";
 	}
+	add_filter('admin_footer_text', 'remove_footer_admin');
 
 	//remove wordpress logo from adminbar
-	add_action('wp_before_admin_bar_render', 'wp_logo_admin_bar_remove', 0);
-
 	function wp_logo_admin_bar_remove() {
 		global $wp_admin_bar;
 		/* Remove their stuff */
 		$wp_admin_bar->remove_menu('wp-logo');
 	}
+	add_action('wp_before_admin_bar_render', 'wp_logo_admin_bar_remove', 0);
 
 	// Remove default Dashboard widgets
-
 	add_action('admin_menu', 'disable_default_dashboard_widgets');
 	function disable_default_dashboard_widgets() {
 
@@ -162,10 +146,9 @@
 		remove_meta_box('dashboard_primary', 'dashboard', 'core');
 		remove_meta_box('dashboard_secondary', 'dashboard', 'core');
 	}
-
 	remove_action('welcome_panel', 'wp_welcome_panel');
 
-	// Emojis
+	// Removi emojis
 	remove_action('wp_head', 'print_emoji_detection_script', 7);
 	remove_action('wp_print_styles', 'print_emoji_styles');
 	remove_action('admin_print_scripts', 'print_emoji_detection_script' );
@@ -254,5 +237,25 @@ function remove_gallery($content) {
 }
 
 add_filter( 'the_content', 'remove_gallery', 6); 
+
+// Add a second logo
+function set_secundary_logo($wp_customize) {
+
+	// add a setting 
+	$wp_customize->add_setting('secundary_logo');
+	 
+	// Add a control to upload the hover logo
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'secundary_logo', array(
+		'label' => 'Logo Secundário',
+		'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
+		'settings' => 'secundary_logo',
+		'priority' => 8 // show it just below the custom-logo
+	)));
+}
+	
+add_action('customize_register', 'set_secundary_logo');
+
+
+
 
 ?>
