@@ -11,10 +11,10 @@
     <div class="row">
       <?php
         $args = [
-          'type'             => 'post',
-          'posts_per_page'   => 12,
-          'cat'	   		   => array(11),
-          'post__not_in' => array(98)
+          'type'              => 'post',
+          'posts_per_page'    => -1,
+          'cat'               => array(11),
+          'post__not_in'      => array(98)
         ];
         $novidades = new WP_Query($args);
         if($novidades->have_posts()):
@@ -22,10 +22,10 @@
         $novidades->the_post();
       ?>
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-5 d-flex flex-column align-items-center">
-        <i class="e-circle-icon material-icons mb-4"><?php echo the_field('icone_diferenciais'); ?></i>
-        <h3 class="d-text-color-dark d-font-bold d-text-xl mb-3"><?php echo the_field('titulo_diferenciais'); ?></h3>
-        <p class="d-text-color-dark d-font-regular d-text-md text-center"><?php echo the_field('descricao_diferenciais'); ?></p>
+      <div class="col-12 col-sm-6 col-lg-4 mb-5 d-flex flex-column align-items-center text-center">
+        <i class="e-circle-icon material-icons mb-4"><?php the_field('icone_diferenciais'); ?></i>
+        <h3 class="d-text-color-dark d-font-bold d-text-xl mb-3"><?php the_field('titulo_diferenciais'); ?></h3>
+        <p class="d-text-color-dark d-font-regular d-text-md text-center"><?php the_field('descricao_diferenciais'); ?></p>
       </div>
 
       <?php endwhile; else: ?>

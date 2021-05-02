@@ -1,0 +1,15 @@
+.m-planos {
+    position: relative;
+
+    .--margin-planos {
+        padding-bottom: 240px;
+    }
+
+    .--padding-planos {
+        padding-top: 80px;
+    }
+
+    &__plans {
+        margin-top: -245px;
+    }
+}

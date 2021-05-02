@@ -5528,7 +5528,7 @@ textarea.form-control-lg {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
-.py-5, .c-plans-box {
+.py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important; }
 
@@ -7713,17 +7713,29 @@ textarea.form-control-lg {
   font-size: 3rem; }
 
 .c-plans-box {
+  padding: 3rem;
+  margin: 1.5rem 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #EAEAEA; }
+  background-color: #EAEAEA;
+  font-family: 'font-bold'; }
   .c-plans-box__title {
-    font-family: 'font-bold';
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #859599; }
+  .c-plans-box__text {
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+    color: #859599; }
   .c-plans-box.--highlighted {
+    margin: 0;
     background-color: #2e525b;
-    color: #fff; }
+    color: #fff;
+    position: relative;
+    padding-top: 5.5rem; }
+    .c-plans-box.--highlighted .e-circle-icon {
+      margin-top: -130px; }
 
 .c-navbar-horizontal > div {
   display: flex;
@@ -7736,3 +7748,12 @@ textarea.form-control-lg {
   justify-content: flex-start;
   margin-bottom: 0;
   padding-left: 0; }
+
+.m-planos {
+  position: relative; }
+  .m-planos .--margin-planos {
+    padding-bottom: 240px; }
+  .m-planos .--padding-planos {
+    padding-top: 80px; }
+  .m-planos__plans {
+    margin-top: -245px; }

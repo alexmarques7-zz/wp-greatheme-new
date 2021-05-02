@@ -7,5 +7,6 @@
 <?php get_template_part('./template-parts/content', 'planos'); ?>
 <?php get_template_part('./template-parts/content', 'parceiros'); ?>
 <?php get_template_part('./template-parts/content', 'cases'); ?>
+<?php get_template_part('./template-parts/content', 'social-midia'); ?>
 
 <?php get_footer(); ?>
