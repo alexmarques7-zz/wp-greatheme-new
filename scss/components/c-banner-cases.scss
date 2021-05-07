@@ -1,0 +1,24 @@
+.c-banner-cases {
+    display: flex!important;
+    padding: 0 40px;
+
+    &__image {
+        max-width: 380px;
+    }
+
+    &__text {
+        font-size: $t-text-md;
+        font-family: 'font-regular';
+    }
+
+    &__name {
+        font-family: 'font-bold';
+        display: flex;
+        flex-direction: column;
+        font-size: $t-text-xl;
+    }
+
+    &__details {
+        font-size: $t-text-md;
+    }
+}

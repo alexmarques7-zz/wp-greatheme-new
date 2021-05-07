@@ -7619,19 +7619,28 @@ textarea.form-control-lg {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.d-text-md {
+.d-text-xs {
+  font-size: 0.625rem; }
+
+.d-text-sm {
   font-size: 1rem; }
 
-.d-text-lg {
+.d-text-md {
   font-size: 1.125rem; }
 
+.d-text-lg {
+  font-size: 1.25rem; }
+
 .d-text-xl {
-  font-size: 2rem; }
+  font-size: 1.75rem; }
 
 .d-text-xxl {
-  font-size: 2.5rem; }
+  font-size: 2rem; }
 
 .d-text-xxxl {
+  font-size: 2.5rem; }
+
+.d-text-xxxxl {
   font-size: 3rem; }
 
 .d-select-none {
@@ -7710,7 +7719,7 @@ textarea.form-control-lg {
   background-color: #fff;
   border-radius: 50%;
   color: #DF4478;
-  font-size: 3rem; }
+  font-size: 2.5rem; }
 
 .c-plans-box {
   padding: 3rem;
@@ -7725,7 +7734,7 @@ textarea.form-control-lg {
     font-size: 2rem;
     color: #859599; }
   .c-plans-box__text {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     margin-bottom: 2.5rem;
     color: #859599; }
   .c-plans-box.--highlighted {
@@ -7748,6 +7757,27 @@ textarea.form-control-lg {
   justify-content: flex-start;
   margin-bottom: 0;
   padding-left: 0; }
+
+.c-carousel {
+  display: flex; }
+  .c-carousel__controls {
+    height: 100%; }
+
+.c-banner-cases {
+  display: flex !important;
+  padding: 0 40px; }
+  .c-banner-cases__image {
+    max-width: 380px; }
+  .c-banner-cases__text {
+    font-size: 1.125rem;
+    font-family: 'font-regular'; }
+  .c-banner-cases__name {
+    font-family: 'font-bold';
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem; }
+  .c-banner-cases__details {
+    font-size: 1.125rem; }
 
 .m-planos {
   position: relative; }

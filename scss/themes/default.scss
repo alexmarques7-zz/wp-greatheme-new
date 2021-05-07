@@ -30,11 +30,14 @@ $t-text-color-dark: $t-aulapp-green;
 $t-text-color-light: $t-white;
 
 // Text sizes
-$t-text-md:     1rem;       //16px
-$t-text-lg:     1.125rem;   //18px
-$t-text-xl:     2rem;       //32px
-$t-text-xxl:    2.5rem;     //40px
-$t-text-xxxl:   3rem;       //48px
+$t-text-xs:     .625rem;    //10px
+$t-text-sm:     1rem;       //16px
+$t-text-md:     1.125rem;   //18px
+$t-text-lg:     1.25rem;    //20px
+$t-text-xl:     1.75rem;    //28px
+$t-text-xxl:     2rem;      //32px
+$t-text-xxxl:    2.5rem;    //40px
+$t-text-xxxxl:   3rem;      //48px
 
 // Shadows
 $t-shadow-bt: 3px 3px 2px #00000029;

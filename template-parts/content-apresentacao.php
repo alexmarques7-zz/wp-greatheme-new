@@ -4,7 +4,7 @@
             
             <div class="col-12 col-lg-6 pe-lg-4 mt-5 mb-5">
                 <h2 class="d-text-color-dark d-font-bold d-text-xxl mb-3"><?php echo get_the_title( 54 ); ?></h2>
-                <p class="d-text-color-dark d-font-regular d-text-md mb-4"><?php echo get_post_field('post_content', 54); ?></p>
+                <p class="d-text-color-dark d-font-regular d-text-sm mb-4"><?php echo get_post_field('post_content', 54); ?></p>
                 <a class="e-btn" title="<?php the_field('texto_do_botao', 54); ?>" href="#"><?php the_field('texto_do_botao', 54); ?></a>
             </div>
             <div class="col-12 col-lg-6 ps-lg-4"">

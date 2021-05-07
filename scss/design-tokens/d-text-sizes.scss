@@ -1,4 +1,12 @@
 // Text sizes
+.d-text-xs {
+    font-size: $t-text-xs;
+}
+
+.d-text-sm {
+    font-size: $t-text-sm;
+}
+
 .d-text-md {
     font-size: $t-text-md;
 }
@@ -17,4 +25,8 @@
 
 .d-text-xxxl {
     font-size: $t-text-xxxl;
+}
+
+.d-text-xxxxl {
+    font-size: $t-text-xxxxl;
 }

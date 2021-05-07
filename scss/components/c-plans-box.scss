@@ -10,12 +10,12 @@
     font-family: 'font-bold';
 
     &__title {
-        font-size: $t-text-xl;
+        font-size: $t-text-xxl;
         color: $t-gray-dark;
     }
 
     &__text {
-        font-size: 1.7rem;
+        font-size: $t-text-xl;
         margin-bottom: 2.5rem;
         color: $t-gray-dark;
     }
