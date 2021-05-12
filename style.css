@@ -5504,7 +5504,7 @@ textarea.form-control-lg {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
-.px-5, .c-navbar-horizontal > div {
+.px-5 {
   padding-right: 3rem !important;
   padding-left: 3rem !important; }
 
@@ -7671,10 +7671,13 @@ textarea.form-control-lg {
   background-color: #EAEAEA; }
 
 .d-bg-gray-medium {
-  background-color: #E1E1E1; }
+  background-color: #d8d8d8; }
 
 .d-shadow-md {
   box-shadow: 3px 3px 2px #00000029; }
+
+.--d-border-top {
+  border-top: 1px solid #d8d8d8; }
 
 .e-btn {
   border: 0;
@@ -7746,17 +7749,30 @@ textarea.form-control-lg {
     .c-plans-box.--highlighted .e-circle-icon {
       margin-top: -130px; }
 
-.c-navbar-horizontal > div {
+.c-navbar {
   display: flex;
-  align-items: center; }
-
-.c-navbar-horizontal .menu {
-  list-style: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0;
-  padding-left: 0; }
+  justify-content: center; }
+  .c-navbar > div {
+    display: flex;
+    align-items: center; }
+  .c-navbar .menu {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding-left: 0; }
+  .c-navbar .menu-item a {
+    text-decoration: none; }
+  .c-navbar.--simple .menu-item {
+    display: inline-flex; }
+    .c-navbar.--simple .menu-item a {
+      font-family: 'font-bold';
+      font-size: 1.125rem;
+      padding: 10px 29px;
+      color: #294951; }
+      .c-navbar.--simple .menu-item a:hover {
+        color: #030607; }
 
 .c-carousel {
   display: flex; }

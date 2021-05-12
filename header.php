@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="c-navbar-horizontal">
+                    <div class="c-navbar --main">
                         <?php wp_nav_menu( array( 
                             'theme_location' => 'primary_menu', 
                             ) ); 

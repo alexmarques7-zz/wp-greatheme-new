@@ -3,6 +3,10 @@
  * @package 	WordPress
  * @autor 		Alex Marques
  */
+
+// Customizer settings
+require_once get_template_directory() . '/inc/customizer.php';
+
 	
 	// Remove JQUERY
 	function my_init() {
@@ -254,8 +258,3 @@ function set_secundary_logo($wp_customize) {
 }
 	
 add_action('customize_register', 'set_secundary_logo');
-
-
-
-
-?>

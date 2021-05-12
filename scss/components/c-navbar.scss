@@ -1,0 +1,50 @@
+//Navbar Horizontal - Wordpress 5
+.c-navbar {
+    display: flex;
+    justify-content: center;
+
+    // Wordpress menu container styles
+    > div {
+        display: flex;
+        align-items: center;
+    }
+
+    // Wordpress menu styles
+    .menu {
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    // Wordpress menu item styles
+    .menu-item {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    // Primary navbar 
+    &.--main {
+
+    }
+
+    &.--simple {
+        .menu-item {
+            display: inline-flex;
+
+            a {
+                font-family: 'font-bold';
+                font-size: $t-text-md;
+                padding: 10px 29px;
+                color: $t-aulapp-green;
+
+                &:hover {
+                    color: $t-brand-color-two-dark;
+                }
+            }
+        }
+    }
+}
