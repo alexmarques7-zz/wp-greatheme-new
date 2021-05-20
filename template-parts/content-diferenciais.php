@@ -1,10 +1,10 @@
 <div class="m-diferenciais  d-select-none py-5 d-bg-gray-medium container-fluid">
-  <div class="container">
+  <div class="container pt-5">
 
-    <div class="row mb-4"> 
-      <div class="col-12 text-center">
-          <h2 class="d-text-color-dark d-font-bold d-text-xxxl mb-3"><?php echo get_the_title( 98 ); ?></h2>
-          <p class="d-text-color-dark d-font-regular d-text-md mb-4"><?php echo get_post_field('post_content', 98); ?></p>
+    <div class="row mb-5"> 
+      <div class="col-12 d-flex flex-column align-items-center text-center">
+          <h2 class="d-text-green-dark d-font-bold d-text-xxxxl mb-3"><?php echo get_the_title( 98 ); ?></h2>
+          <p class="d-text-color-dark d-font-medium d-text-md mb-4 w-50"><?php echo get_post_field('post_content', 98); ?></p>
       </div>
     </div>
     
@@ -23,14 +23,14 @@
       ?>
 
       <div class="col-12 col-sm-6 col-lg-4 mb-5 d-flex flex-column align-items-center text-center">
-        <i class="e-circle-icon material-icons mb-4"><?php the_field('icone_diferenciais'); ?></i>
-        <h3 class="d-text-color-dark d-font-bold d-text-xl mb-3"><?php the_field('titulo_diferenciais'); ?></h3>
-        <p class="d-text-color-dark d-font-regular d-text-sm text-center"><?php the_field('descricao_diferenciais'); ?></p>
+        <i class="e-circle-icon --brand-color material-icons mb-4"><?php the_field('icone_diferenciais'); ?></i>
+        <h3 class="d-text-green-dark d-font-bold d-text-xxl mb-3"><?php the_field('titulo_diferenciais'); ?></h3>
+        <p class="d-text-color-dark d-font-medium d-text-sm text-center w-75"><?php the_field('descricao_diferenciais'); ?></p>
       </div>
 
       <?php endwhile; else: ?>
 
-			<p class="col-12 d-text-color-dark d-font-regular d-text-lg mb-4"><?php esc_html_e( 'Cadastrar os diferenciais.' ); ?></p>
+			<p class="col-12 d-text-color-dark d-font-medium d-text-lg mb-4"><?php esc_html_e( 'Cadastrar os diferenciais.' ); ?></p>
 			
       <?php endif; ?>
 

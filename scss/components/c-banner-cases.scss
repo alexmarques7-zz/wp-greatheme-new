@@ -1,24 +1,48 @@
 .c-banner-cases {
     display: flex!important;
+    align-items: center;
     padding: 0 40px;
 
+    &__quotes {
+        color: $t-brand-color;
+        font-size: 65px;
+        display: block;
+        
+        &.--right {
+            margin-right: -20px;
+        }
+
+        &.--left {
+            margin-left: -10px;
+            text-align: right;
+            transform: scale(-1);
+        }
+    }
+
     &__image {
-        max-width: 380px;
+        max-width: 450px;
+        width: 100%;
+        height: auto;
     }
 
     &__text {
-        font-size: $t-text-md;
-        font-family: 'font-regular';
+        font-size: $t-text-lg;
+        font-family: 'font-medium';
+        padding: 0 40px;
     }
 
     &__name {
         font-family: 'font-bold';
         display: flex;
+        color: $t-brand-color;
         flex-direction: column;
-        font-size: $t-text-xl;
+        font-size: $t-text-lg;
+        padding: 0 40px;
+        font-size: $t-text-color-dark;
     }
 
     &__details {
         font-size: $t-text-md;
+        color: $t-brand-color-two-dark;
     }
 }

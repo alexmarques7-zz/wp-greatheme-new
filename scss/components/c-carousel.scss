@@ -1,6 +1,7 @@
 .c-carousel {
 
     display: flex;
+    align-items: center;
     
     &__content {
         
@@ -11,14 +12,13 @@
     }
  
     &__controls {
-        height: 100%;
+        border: none;
+        background-color: transparent;
 
-        &.--prev {
-            
-        }
-
-        &.--next {
-            
+        .--prev,
+        .--next {
+            width: 2.3rem;
+            height: 2.3rem;
         }
     }
 }

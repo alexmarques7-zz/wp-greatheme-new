@@ -6,7 +6,8 @@
 
 // Customizer settings
 require_once get_template_directory() . '/inc/customizer.php';
-
+require_once get_template_directory() . '/inc/custom-logo.php';
+require_once get_template_directory() . '/inc/navbar-bs5.php';
 	
 	// Remove JQUERY
 	function my_init() {
@@ -90,7 +91,7 @@ require_once get_template_directory() . '/inc/customizer.php';
 		function mytheme_register_nav_menu(){
 			register_nav_menus( array(
 				'primary_menu' => __( 'Primário', 'Menu de áreas localizado no topo do site, Ex. Educacional, Corporativo, etc.' ),
-				'secundary_menu' => __( 'Secundário', 'Menu localizado nas área interna. Ex. Sobre, serviços, etc.' ),
+				'secondary_menu' => __( 'Secundário', 'Menu localizado nas área interna. Ex. Sobre, serviços, etc.' ),
 				'footer_menu'  => __( 'Rodapé', 'Menu localizado no rodapé.' )
 			) );
 		}
@@ -243,18 +244,36 @@ function remove_gallery($content) {
 add_filter( 'the_content', 'remove_gallery', 6); 
 
 // Add a second logo
-function set_secundary_logo($wp_customize) {
+function set_secondary_logo($wp_customize) {
 
 	// add a setting 
-	$wp_customize->add_setting('secundary_logo');
+	$wp_customize->add_setting('secondary_logo');
 	 
 	// Add a control to upload the hover logo
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'secundary_logo', array(
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'secondary_logo', array(
 		'label' => 'Logo Secundário',
 		'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
-		'settings' => 'secundary_logo',
+		'settings' => 'secondary_logo',
 		'priority' => 8 // show it just below the custom-logo
 	)));
 }
 	
-add_action('customize_register', 'set_secundary_logo');
+add_action('customize_register', 'set_secondary_logo');
+
+
+function special_nav_class ($classes, $item) {
+  if (in_array('current-menu-item', $classes) ){
+    $classes[] = 'active ';
+  }
+  return $classes;
+}
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+
+add_filter( 'the_custom_logo', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}

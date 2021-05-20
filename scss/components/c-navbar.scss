@@ -1,7 +1,6 @@
 //Navbar Horizontal - Wordpress 5
 .c-navbar {
     display: flex;
-    justify-content: center;
 
     // Wordpress menu container styles
     > div {
@@ -28,17 +27,72 @@
 
     // Primary navbar 
     &.--main {
+        justify-content: start;
+        font-family: 'font-light';
+        font-size: $t-text-lg;
+        
+        .menu-item {
+            a {
+                @extend .py-2;
+                @extend .px-4;
+                @extend .d-text-green-dark;
+                display: inline-flex;
+                flex-direction: column;
 
+                &:after {
+                    content: '';
+                    width: 40px;
+                    height: 4px;
+                    background-color: transparent; 
+                }
+            }
+
+            &.active {
+                a {
+                    font-family: 'font-bold';
+                    
+                    &:after {
+                        background-color: $t-brand-color;
+                    }
+                }
+            }
+        }
     }
 
-    &.--simple {
+    &.--secondary {
+        justify-content: center;
+
         .menu-item {
             display: inline-flex;
 
             a {
                 font-family: 'font-bold';
                 font-size: $t-text-md;
-                padding: 10px 29px;
+                padding: 0 18px;
+                color: $t-aulapp-green;
+
+                &:hover {
+                    color: $t-brand-color-two-dark;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    // Simple horizontal navbar
+    &.--footer {
+        justify-content: center;
+
+        .menu-item {
+            display: inline-flex;
+
+            a {
+                font-family: 'font-bold';
+                font-size: $t-text-md;
+                padding: 0 29px;
                 color: $t-aulapp-green;
 
                 &:hover {
@@ -48,3 +102,24 @@
         }
     }
 }
+
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {
+    .c-navbar {
+        .menu-item {
+            &:first-child {
+                a {
+                    @extend .ps-xl-0;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {}

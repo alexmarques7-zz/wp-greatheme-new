@@ -14,13 +14,19 @@
     color: $t-white;
     line-height: 22px;
     font-size: $t-text-md;
-    font-family: 'font-bold';
+    font-family: 'font-medium';
+    letter-spacing: .5px;
     transition: background-color .2s ease-out;
 
     &:hover {
         background-color: $t-brand-color-dark;
         color: $t-white;
         cursor: pointer;
+    }
+
+    &.--small {
+        height: 40px;
+        padding: 0 20px;
     }
 
     &.--glass {
@@ -35,6 +41,16 @@
             color: $t-brand-color-medium;
         }
         
+    }
+
+    &.--white {
+        background-color: $t-white;
+        color: $t-brand-color-two;
+        font-family: 'font-bold';
+
+        &:hover {
+            background-color: $t-gray-light;
+        }
     }
 
     &.--brand-color-two {

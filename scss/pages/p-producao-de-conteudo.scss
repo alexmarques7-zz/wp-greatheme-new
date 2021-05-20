@@ -1,0 +1,19 @@
+.p-producao-de-conteudo {
+    .--n-margin-box-1 {
+        margin-bottom: -185px;
+    }
+
+    .--n-margin-box-2 {
+        margin-top: -190px;
+    }
+
+    .--height-custom {
+        height: 420px;
+    }
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

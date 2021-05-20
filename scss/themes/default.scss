@@ -2,11 +2,12 @@
 $path: '/aulapp/wp-content/themes/wp-greatheme-new/';
 
 // Commom colors
-$t-white: #fff;
+$t-white: rgb(255, 255, 255);
 $t-black: #000;
 $t-aulapp-rose: #DF4478;
 $t-aulapp-green-light: #00B28C;
 $t-aulapp-green: #294951;
+$t-aulapp-gray-dark: #1D1D1D;
 
 // Brand colors
 $t-brand-color: $t-aulapp-rose;
@@ -26,7 +27,8 @@ $t-gray-medium: #d8d8d8;
 $t-gray-dark: #859599;
 
 // Text colors
-$t-text-color-dark: $t-aulapp-green;
+$t-text-green-dark: $t-aulapp-green;
+$t-text-color-dark: $t-aulapp-gray-dark;
 $t-text-color-light: $t-white;
 
 // Text sizes

@@ -1,0 +1,13 @@
+.e-logo {
+    width: 250px!important;
+    height: 105px!important;
+}
+
+.container {
+    .navbar {
+        & > img {
+            width: 250px!important;
+            height: 110px!important;
+        }
+    }
+}

@@ -4,8 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $t-white;
     border-radius: 50%;
-    color: $t-brand-color;
     font-size: $t-text-xxxl;
+
+    &.--brand-color {
+        color: $t-brand-color;
+        background-color: $t-white;
+    }
+
+    &.--dark {
+        color: $t-text-color-dark;
+        background-color: $t-white;
+    }
 }

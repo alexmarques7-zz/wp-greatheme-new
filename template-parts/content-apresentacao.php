@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             
-            <div class="col-12 col-lg-6 pe-lg-4 mt-5 mb-5">
-                <h2 class="d-text-color-dark d-font-bold d-text-xxl mb-3"><?php echo get_the_title( 54 ); ?></h2>
-                <p class="d-text-color-dark d-font-regular d-text-sm mb-4"><?php echo get_post_field('post_content', 54); ?></p>
+            <div class="col-12 col-lg-5 pe-lg-4 mt-5 mb-5">
+                <h2 class="d-text-green-dark d-font-bold d-text-xxxl mb-3"><?php echo get_the_title( 54 ); ?></h2>
+                <p class="d-text-green-dark d-font-medium d-text-sm mb-4"><?php echo get_post_field('post_content', 54); ?></p>
                 <a class="e-btn" title="<?php the_field('texto_do_botao', 54); ?>" href="#"><?php the_field('texto_do_botao', 54); ?></a>
             </div>
-            <div class="col-12 col-lg-6 ps-lg-4"">
+            <div class="col-12 col-lg-7 ps-lg-4"">
                 <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/mulher-surpresa.png" alt="Mulher e Tablet">
             </div>
 
