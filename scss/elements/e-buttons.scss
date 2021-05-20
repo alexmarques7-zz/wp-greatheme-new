@@ -60,4 +60,12 @@
             background-color: $t-brand-color-two-medium;
         }
     }
+
+    &.--brand-color-three {
+        background-color: $t-brand-color-three;
+
+        &:hover {
+            background-color: $t-brand-color-three-medium;
+        }
+    }
 }

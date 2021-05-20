@@ -19,6 +19,14 @@
     background-color: $t-gray-medium;
 }
 
+.d-bg-gray-dark {
+    background-color: $t-gray-dark;
+}
+
+.d-bg-brand-color-three {
+    background-color: $t-brand-color-three;
+}
+
 .--d-bg-dual-vertical {
     background: repeating-linear-gradient(
         to right,
@@ -33,13 +41,13 @@
     border-radius: 50%;
 }
 
-.videoWrapper {
+.video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 }
 
-.videoWrapper iframe {
+.video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;

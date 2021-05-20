@@ -35,7 +35,7 @@
                     <div class="c-carousel__item carousel-item <?php if ( $i == 1 ) {echo 'active';} ?>" data-bs-interval="10000">
 
                         <div class="c-banner-cases">
-                            <img class="c-banner-cases__image" src="<?php the_field('cases_cliente_logo'); ?>" alt="Logo">
+                            <img class="c-banner-cases__image" width="368" height="155" src="<?php the_field('cases_cliente_logo'); ?>" alt="Logo">
                             <div>
                                 <p class="c-banner-cases__text">
                                     <span class="c-banner-cases__quotes --left material-icons">format_quote</span>

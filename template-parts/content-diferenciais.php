@@ -23,7 +23,13 @@
       ?>
 
       <div class="col-12 col-sm-6 col-lg-4 mb-5 d-flex flex-column align-items-center text-center">
-        <i class="e-circle-icon --brand-color material-icons mb-4"><?php the_field('icone_diferenciais'); ?></i>
+
+        <?php if (is_page_template( 'page-educacional.php' )): ?>
+          <i class="e-circle-icon --brand-color material-icons mb-4"><?php the_field('icone_diferenciais'); ?></i>
+        <?php else: ?>
+          <i class="e-circle-icon --brand-color-three material-icons mb-4"><?php the_field('icone_diferenciais'); ?></i>
+        <?php endif ?>
+
         <h3 class="d-text-green-dark d-font-bold d-text-xxl mb-3"><?php the_field('titulo_diferenciais'); ?></h3>
         <p class="d-text-color-dark d-font-medium d-text-sm text-center w-75"><?php the_field('descricao_diferenciais'); ?></p>
       </div>

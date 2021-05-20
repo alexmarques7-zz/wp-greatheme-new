@@ -5415,7 +5415,7 @@ textarea.form-control-lg {
 .me-3 {
   margin-right: 1rem !important; }
 
-.me-4 {
+.me-4, .c-card-color__image {
   margin-right: 1.5rem !important; }
 
 .me-5 {
@@ -5424,7 +5424,7 @@ textarea.form-control-lg {
 .me-auto {
   margin-right: auto !important; }
 
-.mb-0 {
+.mb-0, .c-card-color__name {
   margin-bottom: 0 !important; }
 
 .mb-1 {
@@ -5475,7 +5475,7 @@ textarea.form-control-lg {
 .p-2 {
   padding: 0.5rem !important; }
 
-.p-3 {
+.p-3, .c-card-color {
   padding: 1rem !important; }
 
 .p-4 {
@@ -7623,13 +7623,16 @@ textarea.form-control-lg {
   font-size: 0.625rem; }
 
 .d-text-sm {
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 19px; }
 
-.d-text-md {
-  font-size: 1.125rem; }
+.d-text-md, .c-card-color__name {
+  font-size: 1.125rem;
+  line-height: 22px; }
 
 .d-text-lg {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  line-height: 24px; }
 
 .d-text-xl {
   font-size: 1.75rem; }
@@ -7642,6 +7645,30 @@ textarea.form-control-lg {
 
 .d-text-xxxxl {
   font-size: 3rem; }
+
+.d-line-xs {
+  line-height: 12px; }
+
+.d-line-sm {
+  line-height: 19px; }
+
+.d-line-md {
+  line-height: 22px; }
+
+.d-line-lg {
+  line-height: 24px; }
+
+.d-line-xl {
+  line-height: 25px; }
+
+.d-line-xxl {
+  line-height: 36px; }
+
+.d-line-xxxl {
+  line-height: 45px; }
+
+.d-line-xxxxl {
+  line-height: 53px; }
 
 .d-select-none {
   -webkit-user-select: none;
@@ -7681,19 +7708,25 @@ textarea.form-control-lg {
 .d-bg-gray-medium {
   background-color: #d8d8d8; }
 
+.d-bg-gray-dark {
+  background-color: #859599; }
+
+.d-bg-brand-color-three {
+  background-color: #00B28C; }
+
 .--d-bg-dual-vertical {
   background: repeating-linear-gradient(to right, #d8d8d8, #d8d8d8 50%, #294951 50%, #294951 100%); }
 
 .e-circle {
   border-radius: 50%; }
 
-.videoWrapper {
+.video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   height: 0; }
 
-.videoWrapper iframe {
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -7709,6 +7742,9 @@ textarea.form-control-lg {
 .--d-border {
   border: 1px solid #859599;
   background-color: #F2F2F2; }
+
+.--d-border-bottom {
+  border-bottom: 1px solid #d8d8d8; }
 
 .e-btn {
   border: 0;
@@ -7753,6 +7789,10 @@ textarea.form-control-lg {
     background-color: #294951; }
     .e-btn.--brand-color-two:hover {
       background-color: #203a40; }
+  .e-btn.--brand-color-three {
+    background-color: #00B28C; }
+    .e-btn.--brand-color-three:hover {
+      background-color: #009978; }
 
 .e-circle-icon {
   width: 83px;
@@ -7768,6 +7808,9 @@ textarea.form-control-lg {
   .e-circle-icon.--dark {
     color: #1D1D1D;
     background-color: white; }
+  .e-circle-icon.--brand-color-three {
+    color: #00B28C;
+    background-color: white; }
 
 .e-logo {
   width: 250px !important;
@@ -7776,6 +7819,29 @@ textarea.form-control-lg {
 .container .navbar > img {
   width: 250px !important;
   height: 110px !important; }
+
+.c-card-color {
+  box-shadow: 7px 7px 10px #00000029;
+  display: flex;
+  align-items: center;
+  font-family: 'font-medium'; }
+  .c-card-color__image {
+    display: block;
+    width: 100%;
+    max-width: 235px;
+    height: 235px;
+    background-color: #d8d8d8;
+    text-indent: -9999px; }
+  .c-card-color__name {
+    display: flex;
+    flex-direction: column;
+    font-family: 'font-bold'; }
+  .c-card-color__name2 {
+    font-family: 'font-medium';
+    font-style: italic; }
+  .c-card-color.--white {
+    background-color: white;
+    border: 1px solid #707070; }
 
 .c-plans-box {
   padding: 3rem;
@@ -7832,6 +7898,8 @@ textarea.form-control-lg {
       font-family: 'font-bold'; }
       .c-navbar.--main .menu-item.active a:after {
         background-color: #DF4478; }
+  .c-navbar.--brand-color-three .menu-item.active a:after {
+    background-color: #00B28C; }
   .c-navbar.--secondary {
     justify-content: center; }
     .c-navbar.--secondary .menu-item {
@@ -7870,7 +7938,7 @@ textarea.form-control-lg {
 
 .c-banner-cases {
   display: flex !important;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 40px; }
   .c-banner-cases__quotes {
     color: #DF4478;
@@ -7883,13 +7951,19 @@ textarea.form-control-lg {
       text-align: right;
       transform: scale(-1); }
   .c-banner-cases__image {
-    max-width: 450px;
-    width: 100%;
-    height: auto; }
+    margin-top: 72px;
+    width: 100% !important;
+    max-width: 360px;
+    height: 155px;
+    background-color: #859599;
+    text-indent: -9999px;
+    display: block; }
   .c-banner-cases__text {
     font-size: 1.25rem;
+    line-height: 24px;
     font-family: 'font-medium';
-    padding: 0 40px; }
+    padding: 0 40px;
+    height: 290px; }
   .c-banner-cases__name {
     font-family: 'font-bold';
     display: flex;
@@ -7897,7 +7971,8 @@ textarea.form-control-lg {
     flex-direction: column;
     font-size: 1.25rem;
     padding: 0 40px;
-    font-size: #1D1D1D; }
+    font-size: #1D1D1D;
+    margin-top: -30px; }
   .c-banner-cases__details {
     font-size: 1.125rem;
     color: #030607; }
@@ -7910,6 +7985,62 @@ textarea.form-control-lg {
     padding-top: 80px; }
   .m-planos__plans {
     margin-top: -245px; }
+
+.m-sobre img {
+  width: 100% !important;
+  max-width: 360px;
+  height: auto;
+  background-color: #859599;
+  text-indent: -9999px;
+  display: block; }
+
+.m-banner-principal .banner {
+  width: 100%;
+  height: 580px; }
+
+.m-banner-principal .video {
+  height: 380px; }
+
+.m-banner-principal iframe {
+  height: 380px; }
+
+.m-banner-principal .video-wrapper {
+  width: 670px;
+  height: 380px;
+  margin-top: -190px;
+  padding: initial;
+  margin-bottom: 65px; }
+
+.m-apresentacao img {
+  width: 100% !important;
+  height: 100%;
+  background-color: #859599;
+  text-indent: -9999px;
+  display: block; }
+
+.m-tutoriais {
+  height: 400px;
+  background-color: #d8d8d8; }
+  .m-tutoriais img {
+    width: 100% !important;
+    height: 300px;
+    background-color: #859599;
+    text-indent: -9999px;
+    display: block; }
+
+.m-parceiros-lista img {
+  width: 100% !important;
+  height: 300px;
+  background-color: #859599;
+  text-indent: -9999px;
+  display: block; }
+
+.m-central-ajuda {
+  height: 400px;
+  background-color: #859599; }
+
+.m-header__menu_secondary {
+  height: 121px; }
 
 .p-producao-de-conteudo .--n-margin-box-1 {
   margin-bottom: -185px; }

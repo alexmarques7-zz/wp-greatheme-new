@@ -8,13 +8,13 @@
                     <a class="e-btn --white" href="#">Fale com o Consultor</a>
                 </div>
                 <div class="col-6">
-                    <div class="e-card-color --white">
-                        <img class="e-circle" src="" alt="">
+                    <div class="c-card-color --white">
+                        <img class="c-card-color__image e-circle" width="235" height="235" src="" alt="">
                         <div>
-                            <p>"Através da Aulapp consegui levar meus cursos e palestras para o meio digital. É uma plataforma incrível, intuitiva e com recursos que permitem personalizar a estrutura de cada curso." Débora Guerreiro Owner G5 Brasil</p>
-                            <p>
+                            <p class="c-card-color__text">"Através da Aulapp consegui levar meus cursos e palestras para o meio digital. É uma plataforma incrível, intuitiva e com recursos que permitem personalizar a estrutura de cada curso."</p>
+                            <p class="c-card-color__name">
                                 Débora Guerreiro
-                                <span>Owner G5 Brasil</span>
+                                <span class="c-card-color__name2">Owner G5 Brasil</span>
                             </p>
                         </div>
                     </div>

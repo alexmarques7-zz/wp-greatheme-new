@@ -11,7 +11,7 @@
 
             <div class="row d-flex justify-content-center --n-margin-box-1">
                 <div class="col-7">
-                    <div class="videoWrapper">
+                    <div class="video-wrapper">
                         <iframe 
                             title="iframe"
                             src="<?php the_field('video_producao_conteudo', 196); ?>"

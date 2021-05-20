@@ -59,6 +59,18 @@
         }
     }
 
+    &.--brand-color-three  {
+        .menu-item {
+            &.active {
+                a {
+                    &:after {
+                        background-color: $t-brand-color-three;
+                    }
+                }
+            }
+        }
+    }
+
     &.--secondary {
         justify-content: center;
 

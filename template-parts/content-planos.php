@@ -2,7 +2,12 @@
 
   <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="d-select-none --margin-planos px-5 pt-5 d-bg-brand-color container-fluid">
+    <?php if (is_page_template( 'page-educacional.php' )): ?>
+      <div class="d-select-none --margin-planos px-5 pt-5 d-bg-brand-color container-fluid">
+    <?php else: ?>
+      <div class="d-select-none --margin-planos px-5 pt-5 d-bg-brand-color-three container-fluid">
+    <?php endif ?>
+    
       <div class="container pt-4">
         <div class="row mb-4"> 
           <div class="col-12 d-flex flex-column align-items-center text-center">
@@ -24,10 +29,22 @@
           </div>
 
           <div class="col-12 col-lg-4 c-plans-box --highlighted">
-            <i class="e-circle-icon --brand-color material-icons mb-4"><?php the_field('icone_plano_oportunidade', 61); ?></i>
+
+            <?php if (is_page_template( 'page-educacional.php' )): ?>
+              <i class="e-circle-icon --brand-color-three material-icons mb-4"><?php the_field('icone_plano_oportunidade', 61); ?></i>
+            <?php else: ?>
+              <i class="e-circle-icon --brand-color-three material-icons mb-4"><?php the_field('icone_plano_oportunidade', 61); ?></i>
+            <?php endif ?>
+
             <h3 class="c-plans-box__title"><?php the_field('titulo_plano_oportunidade', 61); ?></h3>
             <p class="c-plans-box__text"><?php the_field('descricao_plano_oportunidade', 61); ?></p>
-            <a class="c-plans-box__button e-btn" title="<?php the_field('botoes_link', 61); ?>" href="#"><?php the_field('botoes_link', 61); ?></a>
+
+            <?php if (is_page_template( 'page-educacional.php' )): ?>
+              <a class="c-plans-box__button e-btn" title="<?php the_field('botoes_link', 61); ?>" href="#"><?php the_field('botoes_link', 61); ?></a>
+            <?php else: ?>
+              <a class="c-plans-box__button e-btn --brand-color-three" title="<?php the_field('botoes_link', 61); ?>" href="#"><?php the_field('botoes_link', 61); ?></a>
+            <?php endif ?>
+            
           </div>
 
           <div class="col-12 col-lg-4 c-plans-box">
@@ -40,8 +57,14 @@
         <div class="row">
           <div class="col-12 d-flex flex-column align-items-center text-center --padding-planos">
             <h2 class="d-text-color-light d-font-bold d-text-xxxxl mb-4"><?php the_field('titulo_dois', 61); ?></h2>
-            <p class="d-text-color-light d-font-reglar d-text-lg mb-5 w-75"><?php the_field('descricao_dois', 61); ?></p>
-            <a class="e-btn" title="Vamos começar?" href="#"><?php the_field('botao_link_descricao', 61); ?></a>
+            <p class="d-text-color-light d-font-reglar d-text-md mb-5 w-75"><?php the_field('descricao_dois', 61); ?></p>
+
+            <?php if (is_page_template( 'page-educacional.php' )): ?>
+              <a class="e-btn --brand-color-three" title="Vamos começar?" href="#"><?php the_field('botao_link_descricao', 61); ?></a>
+            <?php else: ?>
+              <a class="e-btn --brand-color-three" title="Vamos começar?" href="#"><?php the_field('botao_link_descricao', 61); ?></a>
+            <?php endif ?>
+
           </div>
         </div>
       </div>

@@ -16,34 +16,37 @@
 <body <?php body_class(''); ?>>
  
 <header class="m-header d-select-none">
-    <div class="container-fluid d-bg-gray-super-light py-2">
+    <div class="container-fluid d-bg-gray-light --d-border-bottom py-2">
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex flex-column justify-content-center flex-lg-row align-items-lg-center justify-content-lg-between">
-                    <div class="c-navbar --main mb-3 mb-lg-0">
-                        <?php wp_nav_menu( array( 
-                            'theme_location' => 'primary_menu', 
-                            ) ); 
-                        ?>
-                    </div>
-                    <a class="e-btn --small --brand-color-two mb-3 mb-lg-0" title="Fale com um consultor" href="#">Fale com um consultor</a>
+                    
+                    <?php if (is_page_template( 'page-educacional.php' )): ?>
+                        <div class="c-navbar --main mb-3 mb-lg-0">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="c-navbar --main --brand-color-three mb-3 mb-lg-0">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
+                        </div>
+                    <?php endif ?>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="c-container-fluid pt-4 d-bg-gray-light">
+    <div class="container-fluid py-4 d-bg-gray-light">
         <div class="container">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="m-header__menu_secondary navbar navbar-expand-lg">
                 
                 <!-- Logo primary and secondary -->
-                <?php if (is_page_template( 'page-educacional.php' ) && (function_exists( 'the_custom_logo'))): ?>
-                    <?php the_custom_logo(); ?>
-                <?php else: ?>
+                <?php if (is_page_template( 'page-corporativo.php' )): ?>
                     <img src="<?php echo get_theme_mod( 'secondary_logo' ); ?>" alt="Logo Aulapp Corporativo">
-                <?php endif ?>
-                
-                <div class="collapse navbar-collapse justify-content-end" id="main-menu">
+                <?php elseif (is_page_template( 'page-educacional.php' ) && (function_exists( 'the_custom_logo'))): ?>
+                    <?php the_custom_logo(); ?>
+                <?php else: ?><?php endif ?>
+
+                <div class="collapse navbar-collapse justify-content-end me-5" id="main-menu">
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'secondary_menu',
@@ -56,6 +59,8 @@
                         ));
                     ?>
                 </div>
+
+                <a class="e-btn --brand-color-two mb-3 mb-lg-0" title="Fale com um consultor" href="#">Fale com um consultor</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
