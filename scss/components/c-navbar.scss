@@ -13,7 +13,6 @@
         list-style: none;
         display: inline-flex;
         align-items: center;
-        justify-content: flex-start;
         margin-bottom: 0;
         padding-left: 0;
     }
@@ -27,15 +26,24 @@
 
     // Primary navbar 
     &.--main {
-        justify-content: start;
+        justify-content: center;
         font-family: 'font-light';
-        font-size: $t-text-lg;
+
+        > div {
+            width: 100%;
+        }
+
+        .menu {
+            width: 100%;
+            justify-content: space-around;
+            justify-content: flex-start;
+        }
         
         .menu-item {
             a {
-                @extend .py-2;
-                @extend .px-4;
-                @extend .d-text-green-dark;
+                padding: $s-1 $s-1;
+                color: $t-aulapp-green;
+                font-size: $t-text-sm;
                 display: inline-flex;
                 flex-direction: column;
 
@@ -74,13 +82,17 @@
     &.--secondary {
         justify-content: center;
 
+        .menu {
+            justify-content: flex-start;
+        }
+
         .menu-item {
             display: inline-flex;
 
             a {
                 font-family: 'font-bold';
                 font-size: $t-text-md;
-                padding: 0 18px;
+                padding: 0 $s-4;
                 color: $t-aulapp-green;
 
                 &:hover {
@@ -97,9 +109,13 @@
     // Simple horizontal navbar
     &.--footer {
         justify-content: center;
+        
+        .menu {
+            flex-direction: column;
+        }
 
         .menu-item {
-            display: inline-flex;
+            display: flex;
 
             a {
                 font-family: 'font-bold';
@@ -116,19 +132,38 @@
 }
 
 
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(md) {}
-
-@include media-breakpoint-up(lg) {}
-
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(sm) {
     .c-navbar {
-        .menu-item {
-            &:first-child {
+        &.--main {
+            font-size: $t-text-md;
+
+            .menu-item {
                 a {
-                    @extend .ps-xl-0;
+                    padding: $s-2 $s-4;
                 }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .c-navbar {
+        &.--main {
+            font-size: $t-text-lg;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .c-navbar {
+        
+        &.--footer {
+            .menu {
+                flex-direction: row;
+            }
+    
+            .menu-item {
+                display: inline-flex;
             }
         }
     }

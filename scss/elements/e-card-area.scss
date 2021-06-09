@@ -1,0 +1,54 @@
+.e-card-area {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding-left: 0;
+    padding-right: $s-5;
+
+    &__link {
+        text-decoration: none;
+        margin-right: $s-3;
+        width: 30%;
+        background-color: $t-white;
+        padding: $s-3;
+        color: $t-aulapp-green;
+        border: 1px solid $t-gray-dark;
+
+        &:hover {
+            background-color: $t-brand-color-two-medium;
+            
+            span {
+                color: $t-white;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        font-size: $t-text-xxxxl;
+        color: $t-brand-color-two-dark;
+        margin-bottom: $s-2;
+    }
+
+    &__text {
+        font-family: 'font-bold';
+        font-size: $t-text-lg;
+        color: $t-aulapp-green;
+    }
+
+    &:hover {
+        &__icon {
+            color: $t-white;
+        }
+    
+        &__text {
+            color: $t-white;
+        }
+    }
+}

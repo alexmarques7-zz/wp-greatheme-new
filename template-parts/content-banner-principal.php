@@ -1,9 +1,15 @@
-<div class="m-banner-principal">
-    <div class="container-fluid banner d-bg-gray-dark">
+<div class="m-banner-principal ">
+    <div class="container-fluid d-bg-gray-dark-light banner">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- Banner -->
+                
+                <?php if (is_page_template( 'page-educacional.php' )): ?>
+                    <?php echo do_shortcode('[smartslider3 slider="2"]');?>
+                <?php else: ?>
+                    <?php echo do_shortcode('[smartslider3 slider="5"]');?>
+                <?php endif ?>
+                    
                 </div>
             </div>
         </div>
@@ -11,8 +17,8 @@
 
     <div class="container-fluid video d-bg-brand-color-two">
         <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-7 col-xxl-7">
                     <div class="video-wrapper">
                         <iframe 
                             title="iframe"

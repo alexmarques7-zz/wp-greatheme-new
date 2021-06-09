@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -17,26 +17,29 @@
  
 <header class="m-header d-select-none">
     <div class="container-fluid d-bg-gray-light --d-border-bottom py-2">
-        <div class="container">
+        <div class="container p-0">
             <div class="row">
-                <div class="col-12 d-flex flex-column justify-content-center flex-lg-row align-items-lg-center justify-content-lg-between">
+                <div class="col-12 d-flex flex-column align-items-center flex-md-row justify-content-md-between">
                     
-                    <?php if (is_page_template( 'page-educacional.php' )): ?>
-                        <div class="c-navbar --main mb-3 mb-lg-0">
-                            <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
-                        </div>
-                    <?php else: ?>
+                    <?php if (is_page_template( 'page-corporativo.php' ) ): ?>
                         <div class="c-navbar --main --brand-color-three mb-3 mb-lg-0">
                             <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
                         </div>
+                    <?php else: ?>
+                        <div class="c-navbar --main mb-3 mb-lg-0">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
+                        </div>
                     <?php endif ?>
+                    
+                    <a class="e-btn --brand-color-two --small mb-3 mb-lg-0" title="Fale com um consultor" href="<?php echo home_url(); ?>/fale-com-um-consultor">Fale com um consultor</a>
+
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container-fluid py-4 d-bg-gray-light">
-        <div class="container">
+        <div class="container p-0">
             <nav class="m-header__menu_secondary navbar navbar-expand-lg">
                 
                 <!-- Logo primary and secondary -->
@@ -44,9 +47,15 @@
                     <img src="<?php echo get_theme_mod( 'secondary_logo' ); ?>" alt="Logo Aulapp Corporativo">
                 <?php elseif (is_page_template( 'page-educacional.php' ) && (function_exists( 'the_custom_logo'))): ?>
                     <?php the_custom_logo(); ?>
-                <?php else: ?><?php endif ?>
+                <?php else: ?>
+                    <?php the_custom_logo(); ?>
+                <?php endif ?>
 
-                <div class="collapse navbar-collapse justify-content-end me-5" id="main-menu">
+                <button class="m-header__toggle-bt" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="m-header__toggle-icon material-icons">menu</span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="main-menu">
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'secondary_menu',
@@ -60,11 +69,6 @@
                     ?>
                 </div>
 
-                <a class="e-btn --brand-color-two mb-3 mb-lg-0" title="Fale com um consultor" href="#">Fale com um consultor</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
             </nav>
         </div>
     </div>

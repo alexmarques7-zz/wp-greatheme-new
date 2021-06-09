@@ -1,4 +1,4 @@
-<footer class="m-footer d-bg-gray-light">
+<footer class="m-footer d-select-none d-bg-gray-light">
   
     <!-- Copyright Section -->
     <div class="container-fluid --d-border-top">
@@ -49,8 +49,8 @@
     <div class="container-fluid --d-border-top">
         <div class="container">
             <div class="row py-3">
-                <div class="col-12 d-flex justify-content-between">
-                    <p class="d-flex align-items-center m-0">
+                <div class="col-12 d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+                    <p class="d-flex align-items-center mb-4 m-md-0">
                         <span class="d-text-xs me-3"><?php echo get_theme_mod( 'text_company' ); ?></span>
                         <?php
                             $logo_company = get_theme_mod( 'logo_company' );

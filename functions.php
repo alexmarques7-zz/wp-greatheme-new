@@ -22,7 +22,8 @@ require_once get_template_directory() . '/inc/navbar-bs5.php';
 	// External files
 	function my_assets() {
         wp_enqueue_script( 'bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js', array('jquery'), NULL, true );
-		wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+		wp_enqueue_style( 'material_icons', 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+		wp_enqueue_style( 'font_awesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 		wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css');
 	}
 	add_action( 'wp_enqueue_scripts', 'my_assets' );
@@ -262,7 +263,7 @@ add_action('customize_register', 'set_secondary_logo');
 
 
 function special_nav_class ($classes, $item) {
-  if (in_array('current-menu-item', $classes) ){
+  if (in_array('current-post-ancestor', $classes) || in_array('current-page-ancestor', $classes) || in_array('current-menu-item', $classes) ){
     $classes[] = 'active ';
   }
   return $classes;

@@ -1,7 +1,6 @@
 // Plans box
 .c-plans-box {
     padding: 3rem;
-    margin: 1.5rem 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -26,8 +25,22 @@
         background-color: $t-brand-color-two-light;
         color: $t-text-color-light;
         position: relative;
-        padding-top: 5.5rem;
 
+        .c-plans-box__title {
+            color: $t-white;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .c-plans-box {
+        margin: 1.5rem 0;
+    }
+
+    // Highlighted plans
+    &.--highlighted {
+        padding-top: 5.5rem;
+        
         .e-circle-icon {
             margin-top: -130px;
         }

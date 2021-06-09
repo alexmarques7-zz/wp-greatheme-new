@@ -1,7 +1,7 @@
 // Colors
 
 .d-brand-color {
-    color: $t-brand-color;
+    color: $t-brand-color !important;
 }
 
 .d-text-color-dark {
@@ -14,6 +14,14 @@
 
 .d-text-color-light {
     color: $t-text-color-light;
+}
+
+.d-color-white {
+    color: $t-white;
+}
+
+.d-brand-color-three {
+    color: $t-brand-color-three !important;
 }
 
 // Fill
