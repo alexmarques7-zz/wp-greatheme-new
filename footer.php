@@ -2,7 +2,7 @@
   
     <!-- Copyright Section -->
     <div class="container-fluid --d-border-top">
-        <div class="container">
+        <div class="container p-0">
             <div class="row py-5 mt-4">
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <a title="<?php echo get_theme_mod( 'text_socialmedia_1' ); ?>" href="<?php echo get_theme_mod( 'link_socialmedia_1' ); ?>" target="_blank">

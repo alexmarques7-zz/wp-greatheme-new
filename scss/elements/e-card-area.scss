@@ -3,16 +3,22 @@
     justify-content: flex-start;
     list-style: none;
     padding-left: 0;
-    padding-right: $s-5;
 
     &__link {
         text-decoration: none;
-        margin-right: $s-3;
-        width: 30%;
+        width: 100%;
         background-color: $t-white;
-        padding: $s-3;
+        padding: $s-2;
         color: $t-aulapp-green;
         border: 1px solid $t-gray-dark;
+        margin-right: $s-3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         &:hover {
             background-color: $t-brand-color-two-medium;
@@ -28,6 +34,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     &__icon {
@@ -52,3 +59,20 @@
         }
     }
 }
+
+@include media-breakpoint-up(sm) {
+    .e-card-area {
+    
+        &__link {
+            padding: $s-3;
+        }
+    }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+    .e-card-area {
+        padding-right: $s-5;
+    }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

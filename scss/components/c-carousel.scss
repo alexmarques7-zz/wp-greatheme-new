@@ -19,6 +19,12 @@
         .--next {
             width: 2.3rem;
             height: 2.3rem;
+            fill: $t-aulapp-green;
+            filter: brightness(0.2);
         }
+    }
+
+    .carousel-indicators {
+        position: initial;
     }
 }

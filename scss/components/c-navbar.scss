@@ -1,6 +1,7 @@
 //Navbar Horizontal - Wordpress 5
 .c-navbar {
     display: flex;
+    width: 100%;
 
     // Wordpress menu container styles
     > div {
@@ -26,7 +27,6 @@
 
     // Primary navbar 
     &.--main {
-        justify-content: center;
         font-family: 'font-light';
 
         > div {
@@ -36,7 +36,6 @@
         .menu {
             width: 100%;
             justify-content: space-around;
-            justify-content: flex-start;
         }
         
         .menu-item {
@@ -81,6 +80,7 @@
 
     &.--secondary {
         justify-content: center;
+        padding-top: 30px;
 
         .menu {
             justify-content: flex-start;
@@ -88,12 +88,23 @@
 
         .menu-item {
             display: inline-flex;
+            justify-content: center;
 
             a {
                 font-family: 'font-bold';
                 font-size: $t-text-md;
                 padding: 0 $s-4;
                 color: $t-aulapp-green;
+                display: inline-flex;
+                flex-direction: column;
+
+                &:after {
+                    content: '';
+                    width: 40px;
+                    height: 4px;
+                    background-color: transparent; 
+                    margin-left: 1px;
+                }
 
                 &:hover {
                     color: $t-brand-color-two-dark;
@@ -103,12 +114,25 @@
                     padding-right: 0;
                 }
             }
+
+            &.active {
+                a {                    
+                    &:after {
+                        background-color: $t-aulapp-green;
+                    }
+                }
+            }
         }
     }
 
     // Simple horizontal navbar
     &.--footer {
         justify-content: center;
+
+        div {
+            width: 100%;
+            justify-content: center;
+        }
         
         .menu {
             flex-direction: column;
@@ -120,7 +144,7 @@
             a {
                 font-family: 'font-bold';
                 font-size: $t-text-md;
-                padding: 0 29px;
+                padding: 0 10px;
                 color: $t-aulapp-green;
 
                 &:hover {
@@ -148,8 +172,32 @@
 
 @include media-breakpoint-up(md) {
     .c-navbar {
+        width: initial;
+        
         &.--main {
             font-size: $t-text-lg;
+            justify-content: flex-start;
+
+            .menu-item {
+                a { 
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        &.--secondary {
+            padding-top: 0;
+        }
+
+        &.--footer {
+            .menu-item {
+
+                a {
+                    padding: 0 12px;
+                }
+            }
         }
     }
 }
@@ -160,6 +208,7 @@
         &.--footer {
             .menu {
                 flex-direction: row;
+                justify-content: space-between;
             }
     
             .menu-item {
@@ -169,4 +218,28 @@
     }
 }
 
-@include media-breakpoint-up(xxl) {}
+
+@include media-breakpoint-up(xl) {
+    .c-navbar {
+        &.--footer {
+            .menu-item {
+                a {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-up(xxl) {
+    .c-navbar {
+        &.--footer {
+            .menu-item {
+                a {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}

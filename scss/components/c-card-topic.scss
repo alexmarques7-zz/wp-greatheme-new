@@ -4,10 +4,10 @@
     justify-content: center;
     flex-direction: column;
     background-color: $t-white;
-    padding: $s-4;
+    padding: $s-3;
     border: 1px solid $t-gray-dark;
     text-decoration: none;
-    max-height: 160px;
+    height: 58px;
     overflow: hidden;
 
     &__icon {
@@ -37,3 +37,14 @@
         }
     }
 }
+
+@include media-breakpoint-up(sm) {
+    .c-card-topic {
+        height: 90px;
+    }
+}
+
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

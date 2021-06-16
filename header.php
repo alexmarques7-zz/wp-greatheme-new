@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-12 d-flex flex-column align-items-center flex-md-row justify-content-md-between">
                     
-                    <?php if (is_page_template( 'page-corporativo.php' ) ): ?>
+                    <?php if (is_page_template( 'page-corporativo.php' )): ?>
                         <div class="c-navbar --main --brand-color-three mb-3 mb-lg-0">
                             <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
                         </div>
@@ -31,7 +31,7 @@
                         </div>
                     <?php endif ?>
                     
-                    <a class="e-btn --brand-color-two --small mb-3 mb-lg-0" title="Fale com um consultor" href="<?php echo home_url(); ?>/fale-com-um-consultor">Fale com um consultor</a>
+                    <a class="e-btn --brand-color-two --small mb-3 mb-lg-0" title="Fale com um consultor" href="<?php echo home_url(); ?>/educacional/fale-com-um-consultor">Fale com um consultor</a>
 
                 </div>
             </div>

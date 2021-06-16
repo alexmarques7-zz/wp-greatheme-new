@@ -7754,6 +7754,9 @@ textarea.form-control-lg {
 
 .e-btn, .c-contact-form .wpcf7-submit {
   border: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   box-shadow: 3px 3px 2px #00000029;
   display: inline-flex;
   align-items: center;
@@ -7828,11 +7831,11 @@ textarea.form-control-lg {
     background-color: white; }
 
 .e-logo {
-  width: 150px !important;
+  width: 158px !important;
   height: auto !important; }
 
 .container .navbar > img {
-  width: 150px !important;
+  width: 180px !important;
   height: auto !important; }
 
 @media (min-width: 768px) {
@@ -7868,16 +7871,20 @@ textarea.form-control-lg {
   display: flex;
   justify-content: flex-start;
   list-style: none;
-  padding-left: 0;
-  padding-right: 2rem; }
+  padding-left: 0; }
   .e-card-area__link {
     text-decoration: none;
-    margin-right: 1rem;
-    width: 30%;
+    width: 100%;
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     color: #294951;
-    border: 1px solid #859599; }
+    border: 1px solid #859599;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .e-card-area__link:last-child {
+      margin-right: 0; }
     .e-card-area__link:hover {
       background-color: #203a40; }
       .e-card-area__link:hover span {
@@ -7886,7 +7893,8 @@ textarea.form-control-lg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
   .e-card-area__icon {
     font-size: 3rem;
     color: #030607;
@@ -7899,6 +7907,14 @@ textarea.form-control-lg {
     color: white; }
   .e-card-area:hover__text {
     color: white; }
+
+@media (min-width: 576px) {
+  .e-card-area__link {
+    padding: 1rem; } }
+
+@media (min-width: 992px) {
+  .e-card-area {
+    padding-right: 2rem; } }
 
 .e-list-ordered {
   list-style-position: inside; }
@@ -7965,7 +7981,8 @@ textarea.form-control-lg {
       margin-top: -130px; } }
 
 .c-navbar {
-  display: flex; }
+  display: flex;
+  width: 100%; }
   .c-navbar > div {
     display: flex;
     align-items: center; }
@@ -7978,14 +7995,12 @@ textarea.form-control-lg {
   .c-navbar .menu-item a {
     text-decoration: none; }
   .c-navbar.--main {
-    justify-content: center;
     font-family: 'font-light'; }
     .c-navbar.--main > div {
       width: 100%; }
     .c-navbar.--main .menu {
       width: 100%;
-      justify-content: space-around;
-      justify-content: flex-start; }
+      justify-content: space-around; }
     .c-navbar.--main .menu-item a {
       padding: 0.25rem 0.25rem;
       color: #294951;
@@ -8004,22 +8019,37 @@ textarea.form-control-lg {
   .c-navbar.--brand-color-three .menu-item.active a:after {
     background-color: #00B28C; }
   .c-navbar.--secondary {
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 30px; }
     .c-navbar.--secondary .menu {
       justify-content: flex-start; }
     .c-navbar.--secondary .menu-item {
-      display: inline-flex; }
+      display: inline-flex;
+      justify-content: center; }
       .c-navbar.--secondary .menu-item a {
         font-family: 'font-bold';
         font-size: 1.125rem;
         padding: 0 1.5rem;
-        color: #294951; }
+        color: #294951;
+        display: inline-flex;
+        flex-direction: column; }
+        .c-navbar.--secondary .menu-item a:after {
+          content: '';
+          width: 40px;
+          height: 4px;
+          background-color: transparent;
+          margin-left: 1px; }
         .c-navbar.--secondary .menu-item a:hover {
           color: #030607; }
         .c-navbar.--secondary .menu-item a:last-child {
           padding-right: 0; }
+      .c-navbar.--secondary .menu-item.active a:after {
+        background-color: #294951; }
   .c-navbar.--footer {
     justify-content: center; }
+    .c-navbar.--footer div {
+      width: 100%;
+      justify-content: center; }
     .c-navbar.--footer .menu {
       flex-direction: column; }
     .c-navbar.--footer .menu-item {
@@ -8027,7 +8057,7 @@ textarea.form-control-lg {
       .c-navbar.--footer .menu-item a {
         font-family: 'font-bold';
         font-size: 1.125rem;
-        padding: 0 29px;
+        padding: 0 10px;
         color: #294951; }
         .c-navbar.--footer .menu-item a:hover {
           color: #030607; }
@@ -8039,14 +8069,32 @@ textarea.form-control-lg {
       padding: 0.5rem 1.5rem; } }
 
 @media (min-width: 768px) {
-  .c-navbar.--main {
-    font-size: 1.25rem; } }
+  .c-navbar {
+    width: initial; }
+    .c-navbar.--main {
+      font-size: 1.25rem;
+      justify-content: flex-start; }
+      .c-navbar.--main .menu-item a:first-child {
+        padding-left: 0; }
+    .c-navbar.--secondary {
+      padding-top: 0; }
+    .c-navbar.--footer .menu-item a {
+      padding: 0 12px; } }
 
 @media (min-width: 992px) {
   .c-navbar.--footer .menu {
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: space-between; }
   .c-navbar.--footer .menu-item {
     display: inline-flex; } }
+
+@media (min-width: 1200px) {
+  .c-navbar.--footer .menu-item a {
+    padding: 0 15px; } }
+
+@media (min-width: 1400px) {
+  .c-navbar.--footer .menu-item a {
+    padding: 0 20px; } }
 
 .c-carousel {
   display: flex;
@@ -8057,7 +8105,11 @@ textarea.form-control-lg {
     .c-carousel__controls .--prev,
     .c-carousel__controls .--next {
       width: 2.3rem;
-      height: 2.3rem; }
+      height: 2.3rem;
+      fill: #294951;
+      filter: brightness(0.2); }
+  .c-carousel .carousel-indicators {
+    position: initial; }
 
 .c-banner-cases {
   display: flex !important;
@@ -8118,10 +8170,10 @@ textarea.form-control-lg {
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid #859599;
   text-decoration: none;
-  max-height: 160px;
+  height: 58px;
   overflow: hidden; }
   .c-card-topic__icon {
     font-size: 70px;
@@ -8140,6 +8192,10 @@ textarea.form-control-lg {
       color: white; }
     .c-card-topic:hover .c-card-topic__text {
       color: white; }
+
+@media (min-width: 576px) {
+  .c-card-topic {
+    height: 90px; } }
 
 .c-contact-form .wpcf7-text,
 .c-contact-form .wpcf7-quiz {
@@ -8249,15 +8305,19 @@ textarea.form-control-lg {
     background: repeating-linear-gradient(to right, #d8d8d8, #d8d8d8 50%, #294951 50%, #294951 100%); } }
 
 .m-banner-principal .banner {
-  width: 100%;
-  height: 600px; }
-
-.m-banner-principal .video {
-  height: 380px; }
+  width: 100%; }
 
 .m-banner-principal .video-wrapper {
-  margin-top: -190px;
-  margin-bottom: 65px; }
+  margin-top: -80px;
+  margin-bottom: 4rem; }
+
+@media (min-width: 992px) {
+  .m-banner-principal .video-wrapper {
+    margin-top: -190px; } }
+
+@media (min-width: 1200px) {
+  .m-banner-principal .video-wrapper {
+    margin-top: -230px; } }
 
 .m-apresentacao img {
   background-color: #859599;
@@ -8265,7 +8325,6 @@ textarea.form-control-lg {
   display: block; }
 
 .m-tutoriais {
-  height: 400px;
   background-color: #d8d8d8; }
   .m-tutoriais img {
     width: 100% !important;
@@ -8289,7 +8348,7 @@ textarea.form-control-lg {
   background-color: transparent; }
 
 .m-header__toggle-icon {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #294951; }
 
 .m-header .show .nav-link,
@@ -8302,13 +8361,13 @@ textarea.form-control-lg {
     display: none; } }
 
 .p-producao-de-conteudo .--n-margin-box-1 {
-  margin-bottom: -115px; }
+  margin-bottom: -95px; }
 
 .p-producao-de-conteudo .--n-margin-box-2 {
-  margin-top: -1250px; }
+  margin-top: -960px; }
 
 .p-producao-de-conteudo .--height-custom {
-  height: 135vh; }
+  height: 1020px; }
 
 @media (min-width: 768px) {
   .p-producao-de-conteudo .--n-margin-box-1 {

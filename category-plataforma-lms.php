@@ -7,10 +7,10 @@
 
         <div class="row">
             <div class="col-12 d-flex flex-column mb-4 pe-5">
-                <h2 class="d-text-green-dark d-font-bold d-text-xxxxl mb-3">
+                <h2 class="d-text-green-dark text-center text-lg-start d-font-bold d-text-xxxxl mb-3">
                     <?php the_field('titulo-central-de-ajuda',331); ?>
                 </h2>
-                <div class="d-text-color-dark d-font-medium d-text-md mb-4">
+                <div class="d-text-color-dark text-center text-lg-start d-font-medium d-text-md mb-4">
                     <?php the_field('subtitulo-central-de-ajuda',331); ?>
                 </div>
             </div>
@@ -34,9 +34,9 @@
                 foreach ($categories as $cat) {
             ?>
     
-            <div class="col-12 col-sm-2 col-md-4 col-lg-3 mb-sm-4">
+            <div class="col-12 mb-3 col-sm-6 col-md-4 col-lg-3 mb-sm-4">
                 <a href="<?php echo get_site_url(); ?>/<?php echo $cat->slug; ?>" class="c-card-topic">
-                    <span class="c-card-topic__icon material-icons"><?php echo $icone; ?></span>
+                    <!-- <span class="c-card-topic__icon material-icons"><?php echo $icone; ?></span> -->
                     <h3 class="c-card-topic__text"><?php echo $cat->cat_name; ?></h3>
                 </a>
             </div>

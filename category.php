@@ -33,7 +33,7 @@
                 
             else: ?>
 
-            <p>Sorry, no posts matched your criteria.</p>
+            <p class="d-text-color-dark d-font-medium d-text-md mb-4">Não existem perguntas neste tópico.</p>
                 
             <?php endif; ?>
 

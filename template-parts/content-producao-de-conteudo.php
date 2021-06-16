@@ -1,6 +1,6 @@
 <div class="p-producao-de-conteudo">
     <div class="container-fluid d-select-none d-bg-gray-light pt-5">
-        <div class="container pt-4">
+        <div class="container">
 
             <div class="row">
                 <div class="col-12 d-flex flex-column align-items-center text-center mb-4">
@@ -10,15 +10,9 @@
             </div>
 
             <div class="row d-flex justify-content-center --n-margin-box-1">
-                <div class="col-12 col-lg-7">
+                <div class="col-12 col-lg-7 p-0">
                     <div class="video-wrapper">
-                        <iframe 
-                            title="iframe"
-                            src="<?php the_field('video_producao_conteudo', 196); ?>"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <img class="img-fluid" src="<?php the_field('imagem-producao-conteudo', 196); ?>">
                     </div>
                 </div>
             </div>
@@ -40,7 +34,7 @@
         <div class="container py-5">
             <div class="row d-flex justify-content-center mb-5 --n-margin-box-2">
                 
-                <div class="col-10 py-4 px-4 py-lg-5 px-lg-5 --d-border">
+                <div class="col-12 col-md-10 py-4 px-4 py-lg-5 px-lg-5 --d-border">
 
                     <div class="mb-5">
                         <h3 class="d-text-green-dark d-font-bold d-text-xxl mb-2"><?php the_field('detalhes_producao_conteudo_um', 196); ?></h3>
@@ -65,7 +59,7 @@
                 </div>
             </div>
             
-            <div class="row m-5 pt-5">
+            <div class="row mb-5 pt-5">
                 <div class="col-12 d-flex justify-content-center">
                     <h3 class="d-text-green-dark d-font-bold d-text-xxxl text-center"><?php the_field('tit_inf_producao_conteudo', 196); ?></h3>
                 </div>
