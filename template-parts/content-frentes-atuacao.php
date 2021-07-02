@@ -1,4 +1,4 @@
-<div class="m-frentes-atuacao d-bg-gray-light py-5">
+<div class="m-frentes-atuacao d-bg-gray-light py-5 d-select-none">
     <div class="container-fluid py-4">
         <div class="container">
             <div class="row mb-3">

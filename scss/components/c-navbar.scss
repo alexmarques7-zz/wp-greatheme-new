@@ -53,11 +53,13 @@
                     background-color: transparent; 
                 }
             }
+        }
+    }
 
+    &.--brand-color  {
+        .menu-item {
             &.active {
                 a {
-                    font-family: 'font-bold';
-                    
                     &:after {
                         background-color: $t-brand-color;
                     }

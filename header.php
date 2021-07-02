@@ -25,8 +25,12 @@
                         <div class="c-navbar --main --brand-color-three mb-3 mb-lg-0">
                             <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
                         </div>
-                    <?php else: ?>
+                    <?php elseif (is_page( 'central-de-ajuda' )): ?>
                         <div class="c-navbar --main mb-3 mb-lg-0">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="c-navbar --brand-color --main mb-3 mb-lg-0">
                             <?php wp_nav_menu( array( 'theme_location' => 'primary_menu',)); ?>
                         </div>
                     <?php endif ?>
@@ -45,10 +49,10 @@
                 <!-- Logo primary and secondary -->
                 <?php if (is_page_template( 'page-corporativo.php' )): ?>
                     <img src="<?php echo get_theme_mod( 'secondary_logo' ); ?>" alt="Logo Aulapp Corporativo">
-                <?php elseif (is_page_template( 'page-educacional.php' ) && (function_exists( 'the_custom_logo'))): ?>
+                <?php elseif (is_page_template( 'page-educacional.php' ) || is_page(array(46,24,22,20 ))): ?>
                     <?php the_custom_logo(); ?>
                 <?php else: ?>
-                    <?php the_custom_logo(); ?>
+                    <img src="<?php echo get_theme_mod( 'tertiary_logo' ); ?>" alt="Logo Aulapp Tecnologia">
                 <?php endif ?>
 
                 <button class="m-header__toggle-bt" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">

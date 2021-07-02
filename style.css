@@ -7576,23 +7576,23 @@ textarea.form-control-lg {
 
 @font-face {
   font-family: "font-light";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Light.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Light.ttf"); }
 
 @font-face {
   font-family: "font-regular";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Regular.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Regular.ttf"); }
 
 @font-face {
   font-family: "font-medium";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Medium.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Medium.ttf"); }
 
 @font-face {
   font-family: 'font-bold';
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Bold.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Bold.ttf"); }
 
 @font-face {
   font-family: "font-black";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Black.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Black.ttf"); }
 
 .d-font-light {
   font-family: 'font-light';
@@ -8012,10 +8012,8 @@ textarea.form-control-lg {
         width: 40px;
         height: 4px;
         background-color: transparent; }
-    .c-navbar.--main .menu-item.active a {
-      font-family: 'font-bold'; }
-      .c-navbar.--main .menu-item.active a:after {
-        background-color: #DF4478; }
+  .c-navbar.--brand-color .menu-item.active a:after {
+    background-color: #DF4478; }
   .c-navbar.--brand-color-three .menu-item.active a:after {
     background-color: #00B28C; }
   .c-navbar.--secondary {
@@ -8304,34 +8302,10 @@ textarea.form-control-lg {
   .m-visao-valores {
     background: repeating-linear-gradient(to right, #d8d8d8, #d8d8d8 50%, #294951 50%, #294951 100%); } }
 
-.m-banner-principal .banner {
-  width: 100%; }
-
-.m-banner-principal .video-wrapper {
-  margin-top: -80px;
-  margin-bottom: 4rem; }
-
-@media (min-width: 992px) {
-  .m-banner-principal .video-wrapper {
-    margin-top: -190px; } }
-
-@media (min-width: 1200px) {
-  .m-banner-principal .video-wrapper {
-    margin-top: -230px; } }
-
 .m-apresentacao img {
   background-color: #859599;
   text-indent: -9999px;
   display: block; }
-
-.m-tutoriais {
-  background-color: #d8d8d8; }
-  .m-tutoriais img {
-    width: 100% !important;
-    height: 300px;
-    background-color: #859599;
-    text-indent: -9999px;
-    display: block; }
 
 .m-parceiros-lista img {
   width: 100% !important;

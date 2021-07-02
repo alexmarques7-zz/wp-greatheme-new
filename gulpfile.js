@@ -75,7 +75,7 @@ gulp.task("cssmin", function () {
 
 // HTML min 
 gulp.task("htmlmin", function () {
-  return gulp.src(["./**/*.php", "!./functions.php", "!dist/**/*.php"]).pipe(htmlmin({
+  return gulp.src(["./**/*.php", "!./functions.php", "!./inc/*.php", "!dist/**/*.php"]).pipe(htmlmin({
     collapseWhitespace: true,
     removeComments: true,
     minifyCSS: true,
