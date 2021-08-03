@@ -7,11 +7,11 @@
                 <?php if (is_page_template( 'page-educacional.php' )): ?>
                     <h2 class="d-text-green-dark text-center text-lg-start d-font-bold d-text-xxxl mb-3"><?php the_field('apresentacao-titulo-educacional',54); ?></h2>
                     <p class="d-text-green-dark text-center text-lg-start d-font-medium d-text-sm mb-4"><?php the_field('apresentacao-texto-educacional',54); ?></p>
-                    <a class="e-btn" title="<?php the_field('texto_do_botao', 54); ?>" href="<?php echo get_site_url(); ?><?php the_field('link-botao-apresentacao', 54); ?>"><?php the_field('texto_do_botao',54); ?></a>
+                    <a class="e-btn" title="<?php the_field('texto_do_botao', 54); ?>" href="<?php echo get_site_url(); ?><?php the_field('link-botao-apresentacao-educacional', 54); ?>"><?php the_field('texto_do_botao',54); ?></a>
                 <?php else: ?>
                     <h2 class="d-text-green-dark text-center text-lg-start d-font-bold d-text-xxxl mb-3"><?php the_field('apresentacao-titulo-corporativo',54); ?></h2>
                     <p class="d-text-green-dark text-center text-lg-start d-font-medium d-text-sm mb-4"><?php the_field('apresentacao-texto-corporativo',54); ?></p>
-                    <a class="e-btn --brand-color-three" title="<?php the_field('texto_do_botao', 54); ?>" href="<?php echo get_site_url(); ?><?php the_field('link-botao-apresentacao', 54); ?>"><?php the_field('texto_do_botao',54); ?></a>
+                    <a class="e-btn --brand-color-three" title="<?php the_field('texto_do_botao', 54); ?>" href="<?php the_field('link-botao-apresentacao-corporativo', 54); ?>"><?php the_field('texto_do_botao',54); ?></a>
                 <?php endif ?>
 
             </div>

@@ -1,4 +1,4 @@
-<div class="m-visao-valores py-5">
+<div class="m-visao-valores py-5 d-select-none">
     <div class="container-fluid py-3 py-lg-4">
         <div class="container">
             <div class="row">

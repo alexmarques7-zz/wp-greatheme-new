@@ -8012,10 +8012,8 @@ textarea.form-control-lg {
         width: 40px;
         height: 4px;
         background-color: transparent; }
-    .c-navbar.--main .menu-item.active a {
-      font-family: 'font-bold'; }
-      .c-navbar.--main .menu-item.active a:after {
-        background-color: #DF4478; }
+  .c-navbar.--brand-color .menu-item.active a:after {
+    background-color: #DF4478; }
   .c-navbar.--brand-color-three .menu-item.active a:after {
     background-color: #00B28C; }
   .c-navbar.--secondary {
@@ -8230,6 +8228,9 @@ textarea.form-control-lg {
 
 .c-contact-form .wpcf7-list-item {
   margin: 1.5rem 0; }
+  .c-contact-form .wpcf7-list-item label {
+    display: flex;
+    align-items: center; }
 
 .c-contact-form .wpcf7-list-item-label {
   font-family: 'font-bold';
@@ -8243,8 +8244,9 @@ textarea.form-control-lg {
     color: white; }
 
 .c-contact-form input[type='checkbox'] {
-  width: 20px;
-  height: 20px; }
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem; }
 
 .c-contact-form p {
   margin-bottom: 0;
@@ -8304,34 +8306,10 @@ textarea.form-control-lg {
   .m-visao-valores {
     background: repeating-linear-gradient(to right, #d8d8d8, #d8d8d8 50%, #294951 50%, #294951 100%); } }
 
-.m-banner-principal .banner {
-  width: 100%; }
-
-.m-banner-principal .video-wrapper {
-  margin-top: -80px;
-  margin-bottom: 4rem; }
-
-@media (min-width: 992px) {
-  .m-banner-principal .video-wrapper {
-    margin-top: -190px; } }
-
-@media (min-width: 1200px) {
-  .m-banner-principal .video-wrapper {
-    margin-top: -230px; } }
-
 .m-apresentacao img {
   background-color: #859599;
   text-indent: -9999px;
   display: block; }
-
-.m-tutoriais {
-  background-color: #d8d8d8; }
-  .m-tutoriais img {
-    width: 100% !important;
-    height: 300px;
-    background-color: #859599;
-    text-indent: -9999px;
-    display: block; }
 
 .m-parceiros-lista img {
   width: 100% !important;

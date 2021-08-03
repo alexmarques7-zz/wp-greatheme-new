@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="container-fluid d-bg-gray-light">
+<div class="container-fluid d-bg-gray-light d-select-none">
     <div class="container px-0 py-5">
 
         <div class="row">

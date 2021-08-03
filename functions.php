@@ -261,6 +261,23 @@ function set_secondary_logo($wp_customize) {
 	
 add_action('customize_register', 'set_secondary_logo');
 
+// Add a second logo
+function set_tertiary_logo($wp_customize) {
+
+	// add a setting 
+	$wp_customize->add_setting('tertiary_logo');
+	 
+	// Add a control to upload the hover logo
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'tertiary_logo', array(
+		'label' => 'Logo Terciário',
+		'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
+		'settings' => 'tertiary_logo',
+		'priority' => 8 // show it just below the custom-logo
+	)));
+}
+	
+add_action('customize_register', 'set_tertiary_logo');
+
 
 function special_nav_class ($classes, $item) {
   if (in_array('current-post-ancestor', $classes) || in_array('current-page-ancestor', $classes) || in_array('current-menu-item', $classes) ){

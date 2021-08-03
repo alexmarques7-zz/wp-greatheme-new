@@ -12,7 +12,9 @@
             <div class="row d-flex justify-content-center --n-margin-box-1">
                 <div class="col-12 col-lg-7 p-0">
                     <div class="video-wrapper">
-                        <img class="img-fluid" src="<?php the_field('imagem-producao-conteudo', 196); ?>">
+                        <a target="_blank" href="<?php the_field('link-imagem-producao-conteudo', 196); ?>">
+                            <img class="img-fluid" src="<?php the_field('imagem-producao-conteudo', 196); ?>">
+                        </a>
                     </div>
                 </div>
             </div>
