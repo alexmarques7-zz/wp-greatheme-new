@@ -7576,23 +7576,23 @@ textarea.form-control-lg {
 
 @font-face {
   font-family: "font-light";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Light.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Light.ttf"); }
 
 @font-face {
   font-family: "font-regular";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Regular.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Regular.ttf"); }
 
 @font-face {
   font-family: "font-medium";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Medium.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Medium.ttf"); }
 
 @font-face {
   font-family: 'font-bold';
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Bold.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Bold.ttf"); }
 
 @font-face {
   font-family: "font-black";
-  src: url("/aulapp/wp-content/themes/wp-greatheme-new//assets/fonts/Roboto-Black.ttf"); }
+  src: url("/wordpress/wp-content/themes/wp-greatheme-new/assets/fonts/Roboto-Black.ttf"); }
 
 .d-font-light {
   font-family: 'font-light';
